@@ -12178,3 +12178,19 @@ fieldset:disabled .btn {
   }
 }
 
+/*--全体共通--*/
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: #d6f5eb;
+}
+
+.space {
+  margin-bottom: 2rem;
+}
+
