@@ -25,7 +25,6 @@ Route::post('/user/register', [RegisterController::class, 'register'])->name('us
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
-
     Route::get('/top', function () {
         return view('items_list');
     })->name('items_list.index');
