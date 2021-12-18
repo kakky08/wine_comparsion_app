@@ -19,9 +19,15 @@ Route::post('/user/register', 'App\Http\Controllers\Auth\RegisterController@regi
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/top', function () {
-    return view('items_list');
-})->name('items_list.index');
-Route::get('/memo', function () {
-    return view('memos_list');
-})->name('memos_list.index');
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/top', function () {
+        return view('items_list');
+    })->name('items_list.index');
+    Route::get('/memo', function () {
+        return view('memos_list');
+    })->name('memos_list.index');
+});
+
+Auth::routes();
