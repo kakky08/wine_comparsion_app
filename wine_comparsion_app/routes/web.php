@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/user', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm')->name('user.register');
-Route::post('/user/register', 'App\Http\Controllers\Auth\RegisterController@register')->name('user.exec.register');
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login.index');
+Route::get('/user', [RegisterController::class, 'showRegistrationForm'])->name('user.register');
+Route::post('/user/register', [RegisterController::class, 'register'])->name('user.exec.register');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -28,6 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/memo', function () {
         return view('memos_list');
     })->name('memos_list.index');
+    Route::get('/mypage', [ProfileController::class, 'index'])->name('mypage.index');
 });
 
 Auth::routes();
