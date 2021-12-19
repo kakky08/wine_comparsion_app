@@ -21,8 +21,12 @@
 </nav>
 {{-- nav --}}
 <div class="h-100 container-fluid">
-    <p>{{ $auth->name }}</p>
-    <p>{{ $auth->email }}</p>
-    <a href="{{ route('edit.profile', $auth->id) }}">aaa</a>
+    <p>プロフィールの更新</p>
+    <form method="POST">
+        @csrf
+        <input type="text" name="edit_name" value="{{ $auth->name }}">
+        <input type="email" name="edit_email" value="{{ $auth->email }}">
+        <button type="submit" class="btn btn-success" formaction="{{ route('profile.update') }}">更新</button>
+    </form>
 </div>
 @endsection
