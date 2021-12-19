@@ -15,7 +15,14 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return view('mypage');
+        $auth = Auth::user();
+        return view('mypage', ['auth' => $auth]);
+    }
+
+    public function edit()
+    {
+        $auth = Auth::user();
+        return view('edit_profile', ['auth' => $auth]);
     }
 
     /**
@@ -26,10 +33,11 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
-        $profile = User::find($request->id);
+        $auth = Auth::id();
+        $profile = User::find($auth);
         $profile->name = $request->edit_name;
         $profile->email = $request->edit_email;
-
+        $profile->update();
         return redirect()->route('mypage.index');
     }
 }

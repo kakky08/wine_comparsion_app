@@ -32,6 +32,8 @@ Route::group(['middleware' => ['auth']], function () {
         return view('memos_list');
     })->name('memos_list.index');
     Route::get('/mypage', [ProfileController::class, 'index'])->name('mypage.index');
+    Route::get('/edit-profile', [ProfileController::class, 'edit'])->name('edit.profile');
+    Route::post('/edit-profile/update', [ProfileController::class, 'update'])->name('profile.update');
 });
 
 Auth::routes();
