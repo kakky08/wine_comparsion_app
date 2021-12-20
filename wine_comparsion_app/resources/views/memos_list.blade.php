@@ -24,12 +24,21 @@
     <div class="row h-100">
         {{-- サイドバー ここから--}}
         <div class="col-md-3 pt-5" style="background-color:rgb(209, 209, 209);">
-
+            <a href="{{ route('memo.add') }}" class="btn btn-success">メモ作成</a>
         </div>
         {{-- サイドバー ここまで--}}
         {{-- memoリスト一覧 ここから --}}
         <div class="col-md-2 p-0" style="background-color:white;">
-            <div class="border-bottom item-center">
+            @if ($memos->count() === 0)
+                <p>メモがありません</p>
+            @endif
+            @foreach ($memos as $memo)
+                <div style="border: 1px solid #ccc">
+                    <h5>{{ $memo->title }}</h5>
+                    <h6>{{ $memo->kind }}</h6>
+                </div>
+            @endforeach
+            {{-- <div class="border-bottom item-center">
                 <h3>ワインの名前</h3>
                 <div class="row">
                     <div class="col-md-12">
@@ -40,161 +49,12 @@
                         <i class="fas fa-star fa-lg"></i>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         {{-- memoリスト一覧 ここから --}}
         {{-- 右のカラム --}}
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
-            <h3 class="border-bottom border-danger border-2 mb-4">あなたにおすすめのワイン</h3>
-            {{-- おすすめ一覧ここから --}}
-            <div class="container mb-5">
-                <div class="row g-2">
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- おすすめ一覧ここまで --}}
-            <h3 class="border-bottom border-danger border-2 mb-4">ワイン一覧</h3>
-            {{-- ワイン一覧ここから --}}
-            <div class="container mb-5">
-                <div class="row g-2">
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- ワイン一覧ここまで --}}
-            {{-- pagination ここから --}}
-            <nav aria-label="Page navigation example col-6">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            {{-- pagination ここまで --}}
+
 
 
         </div>
