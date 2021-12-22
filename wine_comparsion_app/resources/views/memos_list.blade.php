@@ -34,8 +34,10 @@
             @endif
             @foreach ($memos as $memo)
                 <div style="border: 1px solid #ccc">
+                    <a href="{{ route('memo.select', ['id' => $memo->id]) }}" class="list-group-item list-group-item-action @if($select_memo){{ $select_memo->id == $memo->id ? 'active' : '' }} @endif">
                     <h5>{{ $memo->title }}</h5>
                     <h6>{{ $memo->kind }}</h6>
+                </a>
                 </div>
             @endforeach
             {{-- <div class="border-bottom item-center">
@@ -54,8 +56,12 @@
         {{-- memoリスト一覧 ここから --}}
         {{-- 右のカラム --}}
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
-
-
+                    @if ($select_memo)
+                        <div>
+                            <h5>{{ $select_memo->title }}</h5>
+                            <h6>{{ $select_memo->kind }}</h6>
+                        </div>
+                    @endif
 
         </div>
     </div>
