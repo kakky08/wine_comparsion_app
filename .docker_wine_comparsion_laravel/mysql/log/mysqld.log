@@ -421,3 +421,501 @@ Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Comm
 2021-12-18T01:53:22.227843Z 0 [Note] Event Scheduler: Loaded 0 events
 2021-12-18T01:53:22.228659Z 0 [Note] mysqld: ready for connections.
 Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2021-12-22T09:27:37.982035Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-12-22T09:27:38.003198Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+2021-12-22T09:27:38.010731Z 0 [Warning] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+2021-12-22T09:27:38.023400Z 0 [Note] InnoDB: PUNCH HOLE support available
+2021-12-22T09:27:38.024237Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-12-22T09:27:38.024825Z 0 [Note] InnoDB: Uses event mutexes
+2021-12-22T09:27:38.025337Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2021-12-22T09:27:38.026012Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-12-22T09:27:38.027591Z 0 [Note] InnoDB: Using Linux native AIO
+2021-12-22T09:27:38.029720Z 0 [Note] InnoDB: Number of pools: 1
+2021-12-22T09:27:38.034446Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2021-12-22T09:27:38.047025Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2021-12-22T09:27:38.112193Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-12-22T09:27:38.128702Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2021-12-22T09:27:38.207023Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-12-22T09:27:38.215603Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 12661015
+2021-12-22T09:27:38.216908Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 12661024
+2021-12-22T09:27:38.217590Z 0 [Note] InnoDB: Database was not shutdown normally!
+2021-12-22T09:27:38.218229Z 0 [Note] InnoDB: Starting crash recovery.
+2021-12-22T09:27:38.456629Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-12-22T09:27:38.457303Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-12-22T09:27:38.460025Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-12-22T09:27:38.564368Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-12-22T09:27:38.569697Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-12-22T09:27:38.570445Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-12-22T09:27:38.573046Z 0 [Note] InnoDB: 5.7.36 started; log sequence number 12661024
+2021-12-22T09:27:38.573803Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2021-12-22T09:27:38.573968Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-12-22T09:27:38.597979Z 0 [ERROR] InnoDB: Page [page id: space=13, page number=3] log sequence number 12693713 is in the future! Current system log sequence number 12661043.
+2021-12-22T09:27:38.598581Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2021-12-22T09:27:38.600992Z 0 [ERROR] InnoDB: Page [page id: space=14, page number=3] log sequence number 12694540 is in the future! Current system log sequence number 12661043.
+2021-12-22T09:27:38.601519Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2021-12-22T09:27:38.617112Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2021-12-22T09:27:38.617994Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2021-12-22T09:27:38.618666Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2021-12-22T09:27:38.619638Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2021-12-22T09:27:38.625690Z 0 [Note] InnoDB: Buffer pool(s) load completed at 211222 18:27:38
+2021-12-22T09:27:38.629902Z 0 [Warning] CA certificate ca.pem is self signed.
+2021-12-22T09:27:38.630848Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2021-12-22T09:27:38.636562Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-12-22T09:27:38.637100Z 0 [Note] IPv6 is available.
+2021-12-22T09:27:38.637683Z 0 [Note]   - '::' resolves to '::';
+2021-12-22T09:27:38.638293Z 0 [Note] Server socket created on IP: '::'.
+2021-12-22T09:27:38.644309Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2021-12-22T09:27:38.974614Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-12-22T09:27:38.975340Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2021-12-22T09:27:44.151775Z 2 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:51.151192Z 3 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:51.199230Z 3 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:51.200689Z 3 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:51.210928Z 3 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:51.706074Z 5 [Note] Access denied for user ''@'172.31.0.3' (using password: NO)
+2021-12-22T09:28:51.768820Z 6 [Note] Access denied for user ''@'172.31.0.3' (using password: NO)
+2021-12-22T09:28:51.852390Z 7 [Note] Access denied for user ''@'172.31.0.3' (using password: NO)
+2021-12-22T09:28:53.911111Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.911714Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.913344Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.915116Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.915677Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.916483Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.916901Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.917778Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.918150Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:53.918648Z 10 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:28:57.428162Z 14 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:29:03.595664Z 16 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:34:27.214890Z 18 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:34:27.231980Z 18 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:27.321434Z 19 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.923000Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.923834Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.924615Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.925186Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.925801Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.926985Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.927680Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.928179Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.928713Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:42.929947Z 20 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.471881Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.472632Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.473060Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.474313Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.475068Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.476472Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.477157Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.477789Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.478354Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:44.479135Z 22 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:49.446230Z 32 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:51.022738Z 34 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:52.205518Z 36 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:37:53.416194Z 38 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:39:04.081465Z 40 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:39:04.084851Z 40 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:39:04.092204Z 40 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:39:54.779332Z 41 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:39:58.500168Z 42 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:39:58.506263Z 42 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:40:01.014914Z 43 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:40:01.017775Z 43 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:40:01.022123Z 43 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.970353Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.972231Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.972798Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.973258Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.973769Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.975025Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.975515Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.975912Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.976809Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:21.977132Z 44 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.061278Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.061939Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.062419Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.062747Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.063189Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.064213Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.064949Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.065417Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.065956Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:23.066485Z 46 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:27.462741Z 52 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.111759Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.114181Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.116578Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.119880Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.123023Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.125619Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.126419Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.127195Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.128198Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:44.130808Z 54 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.946208Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.947223Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.947809Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.948317Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.948719Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.950368Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.950929Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.951392Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.951879Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:49.952340Z 56 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:53.532567Z 68 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.864687Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.865435Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.866018Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.866681Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.867186Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.868260Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.868681Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.869163Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.870251Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:41:54.870558Z 70 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.019660Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.020648Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.021220Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.021618Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.022096Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.023076Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.023520Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.023958Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.024471Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:42:58.024820Z 72 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.469286Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.470245Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.471320Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.471800Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.472298Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.473298Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.473808Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.474398Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.474968Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:03.475352Z 76 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.018021Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.018631Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.019163Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.019677Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.020022Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.021055Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.022010Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.022486Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.022929Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:06.023372Z 80 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.035376Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.036431Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.037151Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.057356Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.059288Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.062253Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.063689Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.065245Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.066473Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.067801Z 82 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.978232Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.978980Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.979519Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.980217Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.981015Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.982195Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.982650Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.983177Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.983746Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:07.984281Z 84 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:33.277422Z 86 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:33.280976Z 86 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:43:33.287086Z 86 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:45:28.436869Z 87 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:45:28.444799Z 87 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.258422Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.259866Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.260285Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.260826Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.261223Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.262216Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.262708Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.263237Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.263695Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:46:59.264089Z 88 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.605490Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.606440Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.607496Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.607932Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.608414Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.609275Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.609727Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.610131Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.610569Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:06.610922Z 94 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:07.519100Z 96 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:07.520789Z 96 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:07.523000Z 96 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:07.525015Z 96 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:07.526710Z 96 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.199890Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.201947Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.202673Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.203339Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.203824Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.204904Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/failed_jobs from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.205299Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/memos from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.205765Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.206254Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/password_resets from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:47:09.206725Z 98 [Warning] InnoDB: Cannot open table wine_comparsion/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:49:07.947098Z 100 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:49:07.950638Z 100 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:49:07.955380Z 100 [Warning] InnoDB: Cannot open table wine_comparsion/migrations from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:52:07.484720Z 111 [ERROR] InnoDB: Table `wine_comparsion`.`failed_jobs` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:52:07.488975Z 111 [ERROR] InnoDB: Table `wine_comparsion`.`memos` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:52:07.493309Z 111 [ERROR] InnoDB: Table `wine_comparsion`.`migrations` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:52:07.496417Z 111 [ERROR] InnoDB: Table `wine_comparsion`.`password_resets` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:52:07.499540Z 111 [ERROR] InnoDB: Table `wine_comparsion`.`users` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2021-12-22T09:52:51.428052Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-12-22T09:52:51.428776Z 0 [Note] Shutting down slave threads
+2021-12-22T09:52:51.429439Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-12-22T09:52:51.429838Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-12-22T09:52:51.430444Z 0 [Note] Binlog end
+2021-12-22T09:52:51.438435Z 0 [Note] Shutting down plugin 'ngram'
+2021-12-22T09:52:51.439721Z 0 [Note] Shutting down plugin 'partition'
+2021-12-22T09:52:51.440643Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-12-22T09:52:51.441006Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-12-22T09:52:51.441330Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-12-22T09:52:51.442002Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-12-22T09:52:51.442450Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-12-22T09:52:51.442989Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2021-12-22T09:52:51.443844Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-12-22T09:52:51.444340Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-12-22T09:52:51.444891Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-12-22T09:52:51.445373Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-12-22T09:52:51.445929Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-12-22T09:52:51.446688Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-12-22T09:52:51.447142Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-12-22T09:52:51.447691Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-12-22T09:52:51.448353Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-12-22T09:52:51.448781Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-12-22T09:52:51.449261Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-12-22T09:52:51.449678Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-12-22T09:52:51.450368Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-12-22T09:52:51.450852Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-12-22T09:52:51.451250Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-12-22T09:52:51.451595Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-12-22T09:52:51.452012Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-12-22T09:52:51.452405Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-12-22T09:52:51.452803Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-12-22T09:52:51.453187Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-12-22T09:52:51.453528Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-12-22T09:52:51.454017Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-12-22T09:52:51.454482Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-12-22T09:52:51.455711Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-12-22T09:52:51.456078Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-12-22T09:52:51.456476Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-12-22T09:52:51.456828Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-12-22T09:52:51.457365Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-12-22T09:52:51.457852Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-12-22T09:52:51.458279Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-12-22T09:52:51.458894Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-12-22T09:52:51.459600Z 0 [Note] InnoDB: Starting shutdown...
+2021-12-22T09:52:51.562939Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2021-12-22T09:52:51.571401Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 211222 18:52:51
+2021-12-22T09:52:53.310993Z 0 [Note] InnoDB: Shutdown completed; log sequence number 12661052
+2021-12-22T09:52:53.315043Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-12-22T09:52:53.315655Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-12-22T09:52:53.316066Z 0 [Note] Shutting down plugin 'CSV'
+2021-12-22T09:52:53.316556Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-12-22T09:52:53.317032Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-12-22T09:52:53.317573Z 0 [Note] Shutting down plugin 'binlog'
+2021-12-22T09:52:53.339761Z 0 [Note] mysqld: Shutdown complete
+
+2021-12-22T09:52:58.969420Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-12-22T09:52:58.976285Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+2021-12-22T09:52:58.987043Z 0 [Warning] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+2021-12-22T09:52:58.992490Z 0 [Note] InnoDB: PUNCH HOLE support available
+2021-12-22T09:52:58.994502Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-12-22T09:52:58.995137Z 0 [Note] InnoDB: Uses event mutexes
+2021-12-22T09:52:58.995671Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2021-12-22T09:52:58.996248Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-12-22T09:52:58.996782Z 0 [Note] InnoDB: Using Linux native AIO
+2021-12-22T09:52:58.998104Z 0 [Note] InnoDB: Number of pools: 1
+2021-12-22T09:52:58.998932Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2021-12-22T09:52:59.000772Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2021-12-22T09:52:59.022134Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-12-22T09:52:59.025057Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2021-12-22T09:52:59.101949Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-12-22T09:52:59.252857Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-12-22T09:52:59.257465Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-12-22T09:52:59.345589Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-12-22T09:52:59.355485Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-12-22T09:52:59.356458Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-12-22T09:52:59.357988Z 0 [Note] InnoDB: Waiting for purge to start
+2021-12-22T09:52:59.409102Z 0 [Note] InnoDB: 5.7.36 started; log sequence number 12661052
+2021-12-22T09:52:59.410269Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-12-22T09:52:59.410502Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2021-12-22T09:52:59.445547Z 0 [ERROR] InnoDB: Page [page id: space=13, page number=3] log sequence number 12693713 is in the future! Current system log sequence number 12661071.
+2021-12-22T09:52:59.446410Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2021-12-22T09:52:59.454538Z 0 [ERROR] InnoDB: Page [page id: space=14, page number=3] log sequence number 12694540 is in the future! Current system log sequence number 12661071.
+2021-12-22T09:52:59.455158Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2021-12-22T09:52:59.472015Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2021-12-22T09:52:59.472965Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2021-12-22T09:52:59.474134Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2021-12-22T09:52:59.474728Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2021-12-22T09:52:59.486370Z 0 [Warning] CA certificate ca.pem is self signed.
+2021-12-22T09:52:59.487158Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2021-12-22T09:52:59.493245Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-12-22T09:52:59.494287Z 0 [Note] IPv6 is available.
+2021-12-22T09:52:59.496522Z 0 [Note]   - '::' resolves to '::';
+2021-12-22T09:52:59.497280Z 0 [Note] Server socket created on IP: '::'.
+2021-12-22T09:52:59.500106Z 0 [Note] InnoDB: Buffer pool(s) load completed at 211222 18:52:59
+2021-12-22T09:52:59.500996Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2021-12-22T09:52:59.875678Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-12-22T09:52:59.876267Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2021-12-22T09:53:42.276661Z 16 [ERROR] InnoDB: Operating system error number 17 in a file operation.
+2021-12-22T09:53:42.277278Z 16 [ERROR] InnoDB: Error number 17 means 'File exists'
+2021-12-22T09:53:42.277555Z 16 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
+2021-12-22T09:53:42.277810Z 16 [ERROR] InnoDB: Cannot create file './wine_comparsion/migrations.ibd'
+2021-12-22T09:53:42.278095Z 16 [ERROR] InnoDB: The file './wine_comparsion/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_comparsion/migrations.ibd' under the 'datadir' of MySQL.
+2021-12-22T09:53:58.103888Z 17 [ERROR] InnoDB: Operating system error number 17 in a file operation.
+2021-12-22T09:53:58.104719Z 17 [ERROR] InnoDB: Error number 17 means 'File exists'
+2021-12-22T09:53:58.105119Z 17 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
+2021-12-22T09:53:58.105710Z 17 [ERROR] InnoDB: Cannot create file './wine_comparsion/migrations.ibd'
+2021-12-22T09:53:58.106164Z 17 [ERROR] InnoDB: The file './wine_comparsion/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_comparsion/migrations.ibd' under the 'datadir' of MySQL.
+2021-12-22T09:55:33.827566Z 59 [ERROR] InnoDB: Operating system error number 17 in a file operation.
+2021-12-22T09:55:33.828686Z 59 [ERROR] InnoDB: Error number 17 means 'File exists'
+2021-12-22T09:55:33.829057Z 59 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
+2021-12-22T09:55:33.829524Z 59 [ERROR] InnoDB: Cannot create file './wine_comparsion/migrations.ibd'
+2021-12-22T09:55:33.829926Z 59 [ERROR] InnoDB: The file './wine_comparsion/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_comparsion/migrations.ibd' under the 'datadir' of MySQL.
+2021-12-22T09:56:25.698766Z 61 [ERROR] InnoDB: Operating system error number 17 in a file operation.
+2021-12-22T09:56:25.699529Z 61 [ERROR] InnoDB: Error number 17 means 'File exists'
+2021-12-22T09:56:25.699955Z 61 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
+2021-12-22T09:56:25.700304Z 61 [ERROR] InnoDB: Cannot create file './wine_comparsion/migrations.ibd'
+2021-12-22T09:56:25.700739Z 61 [ERROR] InnoDB: The file './wine_comparsion/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_comparsion/migrations.ibd' under the 'datadir' of MySQL.
+2021-12-22T09:58:23.431597Z 62 [Note] Unknown database 'wine_comparsio'
+2021-12-22T09:58:30.429426Z 63 [Note] Unknown database 'wine_comparsio'
+2021-12-22T09:58:57.349697Z 64 [Note] Unknown database 'forge'
+2021-12-22T12:21:50.254440Z 153 [Note] Unknown database 'forge'
+2021-12-22T12:25:51.970426Z 156 [Note] Unknown database 'forge'
+2021-12-22T12:26:21.337955Z 157 [Note] Unknown database 'forge'
+2021-12-22T12:26:31.261600Z 158 [Note] Unknown database 'forge'
+2021-12-22T12:26:59.975138Z 159 [Note] Unknown database 'forge'
+2021-12-22T12:31:17.048409Z 240 [Note] Unknown database 'forge'
+2021-12-22T12:33:33.787833Z 241 [Note] Unknown database 'forge'
+2021-12-22T12:34:08.635612Z 242 [Note] Unknown database 'forge'
+2021-12-22T12:36:27.480970Z 243 [Note] Unknown database 'forge'
+2021-12-22T12:37:37.046611Z 244 [Note] Unknown database 'forge'
+2021-12-22T12:38:06.465827Z 245 [Note] Unknown database 'forge'
+2021-12-22T12:39:46.970379Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2021-12-22T12:39:46.971387Z 0 [Note] Shutting down slave threads
+2021-12-22T12:39:46.972421Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2021-12-22T12:39:46.972980Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2021-12-22T12:39:46.974045Z 0 [Note] Binlog end
+2021-12-22T12:39:46.981950Z 0 [Note] Shutting down plugin 'ngram'
+2021-12-22T12:39:46.983420Z 0 [Note] Shutting down plugin 'partition'
+2021-12-22T12:39:46.985938Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2021-12-22T12:39:46.988008Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2021-12-22T12:39:46.988875Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-12-22T12:39:46.989916Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-12-22T12:39:46.991133Z 0 [Note] Shutting down plugin 'MyISAM'
+2021-12-22T12:39:46.992067Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2021-12-22T12:39:46.992848Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-12-22T12:39:46.993720Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-12-22T12:39:46.994448Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-12-22T12:39:46.995360Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-12-22T12:39:46.996282Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-12-22T12:39:46.997391Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-12-22T12:39:46.998112Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-12-22T12:39:46.999445Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-12-22T12:39:47.000215Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-12-22T12:39:47.000858Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-12-22T12:39:47.001519Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-12-22T12:39:47.002124Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-12-22T12:39:47.002621Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-12-22T12:39:47.003369Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-12-22T12:39:47.003873Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-12-22T12:39:47.004581Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-12-22T12:39:47.005288Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2021-12-22T12:39:47.006126Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-12-22T12:39:47.006688Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-12-22T12:39:47.007173Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-12-22T12:39:47.007674Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-12-22T12:39:47.008282Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-12-22T12:39:47.008774Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-12-22T12:39:47.009162Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-12-22T12:39:47.009741Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-12-22T12:39:47.010236Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2021-12-22T12:39:47.010855Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-12-22T12:39:47.011496Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-12-22T12:39:47.012204Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2021-12-22T12:39:47.012640Z 0 [Note] Shutting down plugin 'InnoDB'
+2021-12-22T12:39:47.013585Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2021-12-22T12:39:47.014635Z 0 [Note] InnoDB: Starting shutdown...
+2021-12-22T12:39:47.120876Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2021-12-22T12:39:47.133572Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 211222 21:39:47
+2021-12-22T12:39:48.303082Z 0 [Note] InnoDB: Shutdown completed; log sequence number 12661180
+2021-12-22T12:39:48.309158Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-12-22T12:39:48.309694Z 0 [Note] Shutting down plugin 'MEMORY'
+2021-12-22T12:39:48.310283Z 0 [Note] Shutting down plugin 'CSV'
+2021-12-22T12:39:48.310771Z 0 [Note] Shutting down plugin 'sha256_password'
+2021-12-22T12:39:48.311245Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2021-12-22T12:39:48.312245Z 0 [Note] Shutting down plugin 'binlog'
+2021-12-22T12:39:48.338816Z 0 [Note] mysqld: Shutdown complete
+
+2021-12-22T12:41:21.504454Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-12-22T12:41:21.514251Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+2021-12-22T12:41:21.520189Z 0 [Warning] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+2021-12-22T12:41:21.525941Z 0 [Note] InnoDB: PUNCH HOLE support available
+2021-12-22T12:41:21.526700Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-12-22T12:41:21.527208Z 0 [Note] InnoDB: Uses event mutexes
+2021-12-22T12:41:21.527748Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2021-12-22T12:41:21.528501Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-12-22T12:41:21.529398Z 0 [Note] InnoDB: Using Linux native AIO
+2021-12-22T12:41:21.530488Z 0 [Note] InnoDB: Number of pools: 1
+2021-12-22T12:41:21.531266Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2021-12-22T12:41:21.533244Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2021-12-22T12:41:21.554670Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-12-22T12:41:21.558714Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2021-12-22T12:41:21.619259Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-12-22T12:41:21.721973Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-12-22T12:41:21.724637Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-12-22T12:41:21.808407Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-12-22T12:41:21.816939Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-12-22T12:41:21.817414Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-12-22T12:41:21.818377Z 0 [Note] InnoDB: 5.7.36 started; log sequence number 12661180
+2021-12-22T12:41:21.819072Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2021-12-22T12:41:21.819253Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-12-22T12:41:21.856883Z 0 [ERROR] InnoDB: Page [page id: space=13, page number=3] log sequence number 12693713 is in the future! Current system log sequence number 12661199.
+2021-12-22T12:41:21.857617Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2021-12-22T12:41:21.864041Z 0 [ERROR] InnoDB: Page [page id: space=14, page number=3] log sequence number 12694540 is in the future! Current system log sequence number 12661199.
+2021-12-22T12:41:21.864751Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2021-12-22T12:41:21.875398Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2021-12-22T12:41:21.875995Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2021-12-22T12:41:21.876798Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2021-12-22T12:41:21.877330Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2021-12-22T12:41:21.887953Z 0 [Warning] CA certificate ca.pem is self signed.
+2021-12-22T12:41:21.888864Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2021-12-22T12:41:21.891055Z 0 [Note] InnoDB: Buffer pool(s) load completed at 211222 21:41:21
+2021-12-22T12:41:21.893640Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-12-22T12:41:21.894740Z 0 [Note] IPv6 is available.
+2021-12-22T12:41:21.895561Z 0 [Note]   - '::' resolves to '::';
+2021-12-22T12:41:21.896529Z 0 [Note] Server socket created on IP: '::'.
+2021-12-22T12:41:21.901835Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2021-12-22T12:41:22.272500Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-12-22T12:41:22.273223Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2021-12-22T12:41:49.035247Z 38 [Note] Unknown database 'forge'
+2021-12-22T12:42:26.277416Z 39 [Note] Unknown database 'forge'
+2021-12-22T12:44:36.604369Z 40 [Note] Unknown database 'forge'
+2021-12-22T12:47:05.046577Z 43 [Note] Unknown database 'forge'
+2021-12-22T12:49:20.569499Z 72 [ERROR] InnoDB: Operating system error number 17 in a file operation.
+2021-12-22T12:49:20.570196Z 72 [ERROR] InnoDB: Error number 17 means 'File exists'
+2021-12-22T12:49:20.570640Z 72 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
+2021-12-22T12:49:20.571663Z 72 [ERROR] InnoDB: Cannot create file './wine_comparsion/migrations.ibd'
+2021-12-22T12:49:20.572495Z 72 [ERROR] InnoDB: The file './wine_comparsion/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_comparsion/migrations.ibd' under the 'datadir' of MySQL.
+2021-12-22T12:50:23.037853Z 73 [ERROR] InnoDB: Operating system error number 17 in a file operation.
+2021-12-22T12:50:23.038461Z 73 [ERROR] InnoDB: Error number 17 means 'File exists'
+2021-12-22T12:50:23.038776Z 73 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
+2021-12-22T12:50:23.039154Z 73 [ERROR] InnoDB: Cannot create file './wine_comparsion/migrations.ibd'
+2021-12-22T12:50:23.039442Z 73 [ERROR] InnoDB: The file './wine_comparsion/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_comparsion/migrations.ibd' under the 'datadir' of MySQL.

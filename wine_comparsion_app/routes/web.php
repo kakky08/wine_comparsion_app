@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
     })->name('items_list.index');
     Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
     Route::get('/memo/add', [MemoController::class, 'add'])->name('memo.add');
+    Route::get('/memo/select', [MemoController::class, 'select'])->name('memo.select');
     Route::get('/mypage', [ProfileController::class, 'index'])->name('mypage.index');
     Route::get('/edit-profile', [ProfileController::class, 'edit'])->name('edit.profile');
     Route::post('/edit-profile/update', [ProfileController::class, 'update'])->name('profile.update');
