@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\MemoController;
 
 
@@ -35,6 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/mypage', [ProfileController::class, 'index'])->name('mypage.index');
     Route::get('/edit-profile', [ProfileController::class, 'edit'])->name('edit.profile');
     Route::post('/edit-profile/update', [ProfileController::class, 'update'])->name('profile.update');
+    Route::get('/items_list', [ItemsController::class, 'getRakutenItems'])->name('items');
 });
 
 Auth::routes();

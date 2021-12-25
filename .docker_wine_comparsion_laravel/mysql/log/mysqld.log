@@ -919,3 +919,46 @@ Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Comm
 2021-12-22T12:50:23.038776Z 73 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
 2021-12-22T12:50:23.039154Z 73 [ERROR] InnoDB: Cannot create file './wine_comparsion/migrations.ibd'
 2021-12-22T12:50:23.039442Z 73 [ERROR] InnoDB: The file './wine_comparsion/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_comparsion/migrations.ibd' under the 'datadir' of MySQL.
+2021-12-24T23:51:36.258074Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-12-24T23:51:36.284568Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+2021-12-24T23:51:36.298476Z 0 [Warning] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+2021-12-24T23:51:36.311177Z 0 [Note] InnoDB: PUNCH HOLE support available
+2021-12-24T23:51:36.311758Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-12-24T23:51:36.312215Z 0 [Note] InnoDB: Uses event mutexes
+2021-12-24T23:51:36.312595Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2021-12-24T23:51:36.312976Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-12-24T23:51:36.313297Z 0 [Note] InnoDB: Using Linux native AIO
+2021-12-24T23:51:36.316096Z 0 [Note] InnoDB: Number of pools: 1
+2021-12-24T23:51:36.319132Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2021-12-24T23:51:36.328245Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2021-12-24T23:51:36.362479Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-12-24T23:51:36.377096Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2021-12-24T23:51:36.440953Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-12-24T23:51:36.466732Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 12708957
+2021-12-24T23:51:36.467987Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 12708966
+2021-12-24T23:51:36.468491Z 0 [Note] InnoDB: Database was not shutdown normally!
+2021-12-24T23:51:36.469156Z 0 [Note] InnoDB: Starting crash recovery.
+2021-12-24T23:51:36.786820Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-12-24T23:51:36.789944Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-12-24T23:51:36.901676Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-12-24T23:51:36.910631Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2021-12-24T23:51:36.911201Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2021-12-24T23:51:36.912301Z 0 [Note] InnoDB: Waiting for purge to start
+2021-12-24T23:51:36.963773Z 0 [Note] InnoDB: 5.7.36 started; log sequence number 12708966
+2021-12-24T23:51:36.964982Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2021-12-24T23:51:36.965155Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2021-12-24T23:51:37.015090Z 0 [Note] InnoDB: Buffer pool(s) load completed at 211225  8:51:37
+2021-12-24T23:51:37.022483Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2021-12-24T23:51:37.024007Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2021-12-24T23:51:37.026069Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2021-12-24T23:51:37.026925Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2021-12-24T23:51:37.048378Z 0 [Warning] CA certificate ca.pem is self signed.
+2021-12-24T23:51:37.049497Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2021-12-24T23:51:37.055848Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-12-24T23:51:37.057058Z 0 [Note] IPv6 is available.
+2021-12-24T23:51:37.057542Z 0 [Note]   - '::' resolves to '::';
+2021-12-24T23:51:37.058032Z 0 [Note] Server socket created on IP: '::'.
+2021-12-24T23:51:37.063247Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2021-12-24T23:51:37.439519Z 0 [Note] Event Scheduler: Loaded 0 events
+2021-12-24T23:51:37.440429Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
