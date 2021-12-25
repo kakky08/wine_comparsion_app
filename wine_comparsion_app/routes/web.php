@@ -27,9 +27,7 @@ Route::post('/user/register', [RegisterController::class, 'register'])->name('us
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/top', function () {
-        return view('items_list');
-    })->name('items_list.index');
+    Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
     Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
     Route::get('/memo/add', [MemoController::class, 'add'])->name('memo.add');
     Route::get('/memo/select', [MemoController::class, 'select'])->name('memo.select');
