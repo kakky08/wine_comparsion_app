@@ -86,4 +86,18 @@ class MemoController extends Controller
         // メモ一覧画面へリダイレクトする
         return redirect()->route('memo.index');
     }
+
+    /**
+     * メモの削除
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+
+    public function delete(Request $request, $id)
+    {
+        Memo::find($id);
+        session()->remove('select_memo');
+
+        return redirect()->route('memo.imdex');
+    }
 }
