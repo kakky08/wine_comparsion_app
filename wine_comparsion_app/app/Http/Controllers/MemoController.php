@@ -25,19 +25,24 @@ class MemoController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        return view('create_memo');
+    }
+
     /**
      * メモの追加
      * @return \Illuminate\Http\RedirectResponse
      */
 
-    public function add()
+    public function add(Request $request)
     {
         Memo::create([
             'user_id' => Auth::id(),
-            'title' => '新規メモ',
-            'number' => 1,
-            'kind' => '赤ワイン',
-            'content' => '',
+            'title' => $request->title,
+            'number' => $request->number,
+            'kind' => $request->kind,
+            'content' => $request->content,
         ]);
 
         return redirect()->route('memo.index');

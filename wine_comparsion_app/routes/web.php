@@ -29,7 +29,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
     Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
-    Route::get('/memo/add', [MemoController::class, 'add'])->name('memo.add');
+    Route::get('/memo/create', [MemoController::class, 'create'])->name('memo.create');
+    Route::post('/memo/add', [MemoController::class, 'add'])->name('memo.add');
     Route::get('/memo/select', [MemoController::class, 'select'])->name('memo.select');
     Route::get('/memo/{id}/edit', [MemoController::class, 'edit']);
     Route::patch('memo/{id}', [MemoController::class, 'update']);
