@@ -88,7 +88,7 @@
             {{-- 右のカラム --}}
         <div class="col-md-9 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
             {{-- {{ $test }} --}}
-            {{-- {{ $items['title'] }} --}}
+            {{ $items['title'] }}
             {{-- {{ $items['price'] }} --}}
             {{-- @for ($i = 0; $i < 5; $i++)
                 {{ $items['title'] }}

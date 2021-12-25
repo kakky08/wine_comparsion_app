@@ -9,6 +9,11 @@ use RakutenRws_Client;
 
 class ItemsController extends Controller
 {
+    public function index()
+    {
+        return view('items_list');
+    }
+
     public function getRakutenItems()
     {
 
