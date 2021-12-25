@@ -56,10 +56,16 @@ class MemoController extends Controller
         return redirect()->route('memo.index');
     }
 
-    /* public function select(Request $request)
+    /**
+     * メモの編集
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+
+    public function edit($id)
     {
-        $memo = Memo::find($request->id);
-        session()->put('select_memo', $memo);
-        return redirect()->route('memo.index');
-    } */
+
+        $memo = Memo::findOrFail($id);
+        return view('edit_memo')->with('memo', $memo);
+    }
 }

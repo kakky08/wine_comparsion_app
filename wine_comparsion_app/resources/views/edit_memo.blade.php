@@ -21,8 +21,22 @@
 </nav>
 {{-- nav --}}
 <div class="h-100 container-fluid">
-    <p>{{ $auth->name }}</p>
-    <p>{{ $auth->email }}</p>
-    <a href="{{ route('edit.profile', $auth->id) }}">aaa</a>
+    <div class="row h-100">
+        {{-- サイドバー ここから--}}
+        <div class="col-md-3 pt-5" style="background-color:rgb(209, 209, 209);">
+            <a href="{{ route('memo.add') }}" class="btn btn-success">メモ作成</a>
+        </div>
+        {{-- サイドバー ここまで--}}
+
+        {{-- 右のカラム --}}
+        <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
+                        <div>
+                            <h5>{{ $memo->title }}</h5>
+                            <h6>{{ $memo->kind }}</h6>
+                        </div>
+
+
+        </div>
+    </div>
 </div>
 @endsection
