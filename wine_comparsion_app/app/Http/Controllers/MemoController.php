@@ -68,4 +68,22 @@ class MemoController extends Controller
         $memo = Memo::findOrFail($id);
         return view('edit_memo')->with('memo', $memo);
     }
+
+    /**
+     * メモの更新
+     * @param Request $request
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+
+    public function update(Request $request, $id)
+    {
+        $memo = Memo::findOrFail($id);
+        $memo->title = $request->title;
+        $memo->kind = $request->kind;
+        $memo->save();
+
+        // メモ一覧画面へリダイレクトする
+        return redirect()->route('memo.index');
+    }
 }

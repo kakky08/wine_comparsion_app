@@ -34,7 +34,15 @@
                             <h5>{{ $memo->title }}</h5>
                             <h6>{{ $memo->kind }}</h6>
                         </div>
-
+            <form action="/memo/{{ $memo->id }}", method="post">
+                @csrf
+                @method('patch')
+                <div>
+                    <input type="text" name='title' value="{{ $memo->title }}" placeholder="{{ $memo->title }}">
+                    <input type="number" name='kind' value='{{ $memo->kind }}' placeholder="{{ $memo->kind }}">
+                    <button type="submit" class="btn btn-success">実行する</button>
+                </div>
+            </form>
 
         </div>
     </div>
