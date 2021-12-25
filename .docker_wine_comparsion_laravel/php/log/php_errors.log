@@ -1,0 +1,38 @@
+[24-Dec-2021 09:49:22 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /var/www/html/wine_comparsion_app/app/Http/Controllers/itemsController.php:9
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/wine_comparsion_app/app/Http/Controllers/itemsController.php on line 9
+[24-Dec-2021 09:49:54 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /var/www/html/wine_comparsion_app/app/Http/Controllers/itemsController.php:9
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/wine_comparsion_app/app/Http/Controllers/itemsController.php on line 9
+[25-Dec-2021 09:21:00 Asia/Tokyo] PHP Warning:  Uncaught ErrorException: require_once(/path/to/sdk-dir/autoload.php): failed to open stream: No such file or directory in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php:13
+Stack trace:
+#0 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(13): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require_once(/p...', '/var/www/html/w...', 13, Array)
+#1 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(13): require_once()
+#2 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(49): App\Http\Controllers\ItemsController->getRakutenItems()
+#3 /var/www/html/wine_comparsion_app/vendor/composer/ClassLoader.php(571): include('/var/www/html/w...')
+#4 /var/www/html/wine_comparsion_app/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/var/www/html/w...')
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Http\\Contro...')
+#6 [internal function]: spl_autoload_call('App\\Ht in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php on line 13
+[25-Dec-2021 09:21:00 Asia/Tokyo] PHP Fatal error:  App\Http\Controllers\ItemsController::getRakutenItems(): Failed opening required '/path/to/sdk-dir/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php on line 13
+[25-Dec-2021 11:24:40 Asia/Tokyo] PHP Warning:  Uncaught ErrorException: require_once(/path/to/sdk-dir/autoload.php): failed to open stream: No such file or directory in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php:14
+Stack trace:
+#0 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(14): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require_once(/p...', '/var/www/html/w...', 14, Array)
+#1 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(14): require_once()
+#2 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(52): App\Http\Controllers\ItemsController->getRakutenItems()
+#3 /var/www/html/wine_comparsion_app/vendor/composer/ClassLoader.php(571): include('/var/www/html/w...')
+#4 /var/www/html/wine_comparsion_app/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/var/www/html/w...')
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Http\\Contro...')
+#6 [internal function]: spl_autoload_call('App\\Ht in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php on line 14
+[25-Dec-2021 11:24:40 Asia/Tokyo] PHP Fatal error:  App\Http\Controllers\ItemsController::getRakutenItems(): Failed opening required '/path/to/sdk-dir/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php on line 14
+[25-Dec-2021 11:25:06 Asia/Tokyo] PHP Warning:  Uncaught ErrorException: require_once(/path/to/sdk-dir/autoload.php): failed to open stream: No such file or directory in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php:9
+Stack trace:
+#0 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(9): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require_once(/p...', '/var/www/html/w...', 9, Array)
+#1 /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php(9): require_once()
+#2 /var/www/html/wine_comparsion_app/vendor/composer/ClassLoader.php(571): include('/var/www/html/w...')
+#3 /var/www/html/wine_comparsion_app/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/var/www/html/w...')
+#4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Http\\Contro...')
+#5 [internal function]: spl_autoload_call('App\\Http\\Contro...')
+#6 /var/www/html/wine_comparsion_app/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__c in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php on line 9
+[25-Dec-2021 11:25:06 Asia/Tokyo] PHP Fatal error:  main(): Failed opening required '/path/to/sdk-dir/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wine_comparsion_app/app/Http/Controllers/ItemsController.php on line 9
