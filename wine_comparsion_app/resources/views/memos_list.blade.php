@@ -25,6 +25,7 @@
         {{-- サイドバー ここから--}}
         <div class="col-md-3 pt-5" style="background-color:rgb(209, 209, 209);">
             <a href="{{ route('memo.create') }}" class="btn btn-success">メモ作成</a>
+            <a href="{{ route('folder.add') }}" class="btn btn-success">フォルダの作成</a>
         </div>
         {{-- サイドバー ここまで--}}
         {{-- memoリスト一覧 ここから --}}
