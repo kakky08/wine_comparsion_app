@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\FolderController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\MemoController;
-
+use App\Models\Folder;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,14 +29,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
-    Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
-    Route::get('/folder', [FolderController::class, 'index'])->name('folder.index');
-    Route::get('/memo', [FolderController::class, 'add'])->name('folder.add');
-    Route::get('/memo/create', [MemoController::class, 'create'])->name('memo.create');
+    Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
+    Route::post('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
+    Route::get('mymemo/folder/select', [FolderController::class, 'select'])->name('folder.select');
+    Route::post('/mymemo/folder/delete', [FolderController::class, 'delete'])->name('folder.delete');
+    // Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
+    // Route::get('folder/memo', [FolderController::class, 'index'])->name('folder_index');
+    // Route::get('/folder/{id}/memos', [FolderController::class, 'index'])->name('folder.index');
+    // Route::get('/memo', [FolderController::class, 'add'])->name('folder.add');
+    /* Route::get('/memo/create', [MemoController::class, 'create'])->name('memo.create');
     Route::post('/memo/add', [MemoController::class, 'add'])->name('memo.add');
     Route::get('/memo/select', [MemoController::class, 'select'])->name('memo.select');
     Route::get('/memo/{id}/edit', [MemoController::class, 'edit']);
-    Route::patch('memo/{id}', [MemoController::class, 'update']);
+    Route::patch('memo/{id}', [MemoController::class, 'update']); */
     Route::get('/mypage', [ProfileController::class, 'index'])->name('mypage.index');
     Route::get('/edit-profile', [ProfileController::class, 'edit'])->name('edit.profile');
     Route::post('/edit-profile/update', [ProfileController::class, 'update'])->name('profile.update');

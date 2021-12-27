@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Folder;
 use App\Models\Memo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -10,99 +11,104 @@ class MemoController extends Controller
 {
 
 
-    /**
-     * 初期表示
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+    // /**
+    //  * 初期表示
+    //  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+    //  */
 
-    public function index()
-    {
-        $memos = Memo::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+    // public function index($id)
+    // {
+    //     $folders = Folder::all();
 
-        return view('memos_list', [
-            'memos' => $memos,
-            'select_memo' => session()->get('select_memo')
-        ]);
-    }
+    //     $current_folder = Folder::find($id);
+    //     $memos = Memo::where('folder_id', $current_folder->id)->orderBy('updated_at', 'desc')->get();
 
-    public function create()
-    {
-        return view('create_memo');
-    }
+    //     return view('memos_list', [
+    //         'folders' => $folders,
+    //         'current_folder_id' => $current_folder->id,
+    //         'memos' => $memos,
+    //         'select_memo' => session()->get('select_memo')
+    //     ]);
+    // }
 
-    /**
-     * メモの追加
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    // public function create()
+    // {
+    //     return view('create_memo');
+    // }
 
-    public function add(Request $request)
-    {
-        Memo::create([
-            'user_id' => Auth::id(),
-            'title' => $request->title,
-            'number' => $request->number,
-            'kind' => $request->kind,
-            'content' => $request->content,
-        ]);
+    // /**
+    //  * メモの追加
+    //  * @return \Illuminate\Http\RedirectResponse
+    //  */
 
-        return redirect()->route('memo.index');
-    }
+    // public function add(Request $request)
+    // {
+    //     Memo::create([
+    //         'user_id' => Auth::id(),
+    //         'title' => $request->title,
+    //         'number' => $request->number,
+    //         'kind' => $request->kind,
+    //         'content' => $request->content,
+    //     ]);
 
-    /**
-     * メモの選択
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    //     return redirect()->route('memo.index');
+    // }
 
-    public function select(Request $request)
-    {
-        $memo = Memo::find($request->id);
-        session()->put('select_memo', $memo);
-        return redirect()->route('memo.index');
-    }
+    // /**
+    //  * メモの選択
+    //  * @param Request $request
+    //  * @return \Illuminate\Http\RedirectResponse
+    //  */
 
-    /**
-     * メモの編集
-     * @param int $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+    // public function select(Request $request)
+    // {
+    //     $memo = Memo::find($request->id);
+    //     session()->put('select_memo', $memo);
+    //     return redirect()->route('memo.index');
+    // }
 
-    public function edit($id)
-    {
+    // /**
+    //  * メモの編集
+    //  * @param int $id
+    //  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+    //  */
 
-        $memo = Memo::findOrFail($id);
-        return view('edit_memo')->with('memo', $memo);
-    }
+    // public function edit($id)
+    // {
 
-    /**
-     * メモの更新
-     * @param Request $request
-     * @param int $id
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    //     $memo = Memo::findOrFail($id);
+    //     return view('edit_memo')->with('memo', $memo);
+    // }
 
-    public function update(Request $request, $id)
-    {
-        $memo = Memo::findOrFail($id);
-        $memo->title = $request->title;
-        $memo->kind = $request->kind;
-        $memo->save();
+    // /**
+    //  * メモの更新
+    //  * @param Request $request
+    //  * @param int $id
+    //  * @return \Illuminate\Http\RedirectResponse
+    //  */
 
-        // メモ一覧画面へリダイレクトする
-        return redirect()->route('memo.index');
-    }
+    // public function update(Request $request, $id)
+    // {
+    //     $memo = Memo::findOrFail($id);
+    //     $memo->title = $request->title;
+    //     $memo->kind = $request->kind;
+    //     $memo->save();
 
-    /**
-     * メモの削除
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    //     // メモ一覧画面へリダイレクトする
+    //     return redirect()->route('memo.index');
+    // }
 
-    public function delete(Request $request, $id)
-    {
-        Memo::find($id);
-        session()->remove('select_memo');
+    // /**
+    //  * メモの削除
+    //  * @param Request $request
+    //  * @return \Illuminate\Http\RedirectResponse
+    //  */
 
-        return redirect()->route('memo.imdex');
-    }
+    // public function delete(Request $request, $id)
+    // {
+    //     Memo::find($id);
+    //     session()->remove('select_memo');
+
+    //     return redirect()->route('memo.imdex');
+    // }
 }

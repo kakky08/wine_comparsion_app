@@ -11,11 +11,12 @@ class FolderController extends Controller
 
     public function index()
     {
-        $folders = Folder::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        $folders = Folder::all();
 
         return view('memos_list', [
             'folders' => $folders,
-            // 'select_memo' => session()->get('select_memo')
+            'select_folder' => session()->get('select_folder'),
+            // 'select_memo' => session()->get('select_memo'),
         ]);
     }
 
@@ -26,6 +27,20 @@ class FolderController extends Controller
             'folder_name' => $request->folder_name,
         ]);
 
-        return redirect()->route('folder.index');
+        return redirect()->route('mymemo.index');
+    }
+
+    public function select(Request $request)
+    {
+        $folder = Folder::find($request->id);
+        session()->put('select_memo', $folder);
+        return redirect()->route('mymemo.index');
+    }
+
+    public function delete(Request $request)
+    {
+        Folder::find($request->edit_id)->delete();
+        session()->remove('select_folder');
+        return redirect()->route('mymemo.index');
     }
 }
