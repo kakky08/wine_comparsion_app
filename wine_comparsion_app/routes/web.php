@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
     Route::get('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
     Route::get('mymemo/folder/select', [FolderController::class, 'select'])->name('folder.select');
-    Route::post('/mymemo/folder/delete', [FolderController::class, 'delete'])->name('folder.delete');
+    Route::get('/mymemo/folder/delete', [FolderController::class, 'folder_delete'])->name('folder.delete');
     // Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
     // Route::get('folder/memo', [FolderController::class, 'index'])->name('folder_index');
     // Route::get('/folder/{id}/memos', [FolderController::class, 'index'])->name('folder.index');
