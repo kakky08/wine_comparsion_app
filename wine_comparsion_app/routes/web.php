@@ -30,7 +30,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
     Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
-    Route::post('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
+    Route::get('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
     Route::get('mymemo/folder/select', [FolderController::class, 'select'])->name('folder.select');
     Route::post('/mymemo/folder/delete', [FolderController::class, 'delete'])->name('folder.delete');
     // Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
