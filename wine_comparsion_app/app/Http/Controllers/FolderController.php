@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 class FolderController extends Controller
 {
+
+    private $folder_id;
     public function index()
     {
         $folders = Folder::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
@@ -29,8 +31,16 @@ class FolderController extends Controller
 
     public function select(Request $request)
     {
-        $folder = Folder::find($request->id);
-        session()->put('select_folder', $folder);
+        $this->folder_id = Folder::find($request->id);
+        session()->put('select_folder', $this->folder_id);
+        return redirect()->route('mymemo.index');
+    }
+
+    public function folder_delete(Request $request)
+    {
+        Folder::find($request->id)->delete();
+        session()->remove('select_folder');
+
         return redirect()->route('mymemo.index');
     }
 }
