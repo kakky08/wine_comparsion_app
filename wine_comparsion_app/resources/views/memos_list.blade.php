@@ -25,28 +25,26 @@
         {{-- サイドバー ここから--}}
         <div class="col-md-3 pt-5" style="background-color:rgb(209, 209, 209);">
             {{-- <a href="{{ route('memo.create') }}" class="btn btn-success">メモ作成</a> --}}
-            <form method="POST">
-                @csrf
-                <input type="hidden" name='folder_id'>
-                <input type="text" name="folder_name" placeholder="フォルダ名">
-                <button type="submit" class="btn btn-success" formaction="{{ route('folder.add') }}">作成</button>
-                <button type="submit" class="btn btn-danger" formaction="{{ route('folder.delete') }}">削除</button>
-            </form>
+            <a href="{{ route('folder.add') }}" class="btn btn-success">フォルダの作成</a>
             @if ($folders->count() === 0)
-            <p>フォルダがありません</p>
-            @else
+                <div class="pl-3 pt-3 h5 text-info text-center">
+                    メモがありません。
+                </div>
+            @endif
             @foreach ($folders as $folder)
-            <a
-            href="{{ route('folder.select', ['id' => $folder->id]) }}"
-            class="{{ $select_folder === $folder->id ? 'active' : ''}}">
-            {{ $folder->folder_name }}
-            </a>
-        @endforeach
-        @endif
+                <a href="{{ route('folder.select', ['id' => $folder->id])}}"
+                    class="list-group-item list-group-item-action @if($select_folder){{$select_folder->id == $folder->id ? 'active' : ''}}@endif">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ $folder->folder_name }} </h5>
+                    <small>{{ date('Y/m/d H:i', strtotime($folder->updated_at)) }}</small>
+                </div>
+                </a>
+            @endforeach
         </div>
         {{-- サイドバー ここまで--}}
         {{-- memoリスト一覧 ここから --}}
         <div class="col-md-2 p-0" style="background-color:white;">
+
            {{--  @if ($memos->count() === 0)
                 <p>メモがありません</p>
             @endif

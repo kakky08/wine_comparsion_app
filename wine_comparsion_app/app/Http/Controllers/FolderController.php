@@ -8,23 +8,20 @@ use Illuminate\Support\Facades\Auth;
 
 class FolderController extends Controller
 {
-
     public function index()
     {
-        $folders = Folder::all();
-
+        $folders = Folder::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
         return view('memos_list', [
             'folders' => $folders,
-            'select_folder' => session()->get('select_folder'),
-            // 'select_memo' => session()->get('select_memo'),
+            'select_folder' => session()->get('select_folder')
         ]);
     }
 
-    public function add(Request $request)
+    public function add()
     {
         Folder::create([
             'user_id' => Auth::id(),
-            'folder_name' => $request->folder_name,
+            'folder_name' => 'name',
         ]);
 
         return redirect()->route('mymemo.index');
@@ -33,14 +30,7 @@ class FolderController extends Controller
     public function select(Request $request)
     {
         $folder = Folder::find($request->id);
-        session()->put('select_memo', $folder);
-        return redirect()->route('mymemo.index');
-    }
-
-    public function delete(Request $request)
-    {
-        Folder::find($request->edit_id)->delete();
-        session()->remove('select_folder');
+        session()->put('select_folder', $folder);
         return redirect()->route('mymemo.index');
     }
 }
