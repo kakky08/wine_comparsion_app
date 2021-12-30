@@ -24,6 +24,12 @@
     <div class="row h-100">
         {{-- サイドバー ここから--}}
         <div class="col-md-3 pt-5" style="background-color:rgb(209, 209, 209);">
+            <form method="POST" action="{{ route('create.folder')}}">
+                @csrf
+                <input type="hidden" name="user_id" value="{{ $user['id'] }}">
+                <input type="text" name="folder" placeholder="ファイル名を入力">
+                <button type="submit" class="btn btn-success">作成</button>
+            </form>
             {{-- <a href="{{ route('memo.create') }}" class="btn btn-success">メモ作成</a> --}}
             <!-----省略----->
         {{-- <form class="w-100 h-100" method="post">
