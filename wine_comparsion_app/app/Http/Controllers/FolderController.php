@@ -19,6 +19,17 @@ class FolderController extends Controller
         ]);
     }
 
+    public function create_folder(Request $request)
+    {
+        $data = $request->all();
+        $exist_folder = Folder::where('folder_name', $data['folder'])->where('user_id', $data['user_id'])->first();
+        if (empty($exist_folder['id'])) {
+            $folder_id = Folder::insertGetId(['folder_name' => $data['folder'], 'user_id' => $data['user_id']]);
+        } else {
+            $folder_id = $exist_folder['id'];
+        }
+    }
+
     public function add()
     {
         Folder::create([
