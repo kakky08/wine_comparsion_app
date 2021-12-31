@@ -26,10 +26,15 @@
         <div class="col-md-3 pt-5" style="background-color:rgb(209, 209, 209);">
             <form method="POST" action="{{ route('create.folder')}}">
                 @csrf
-                <input type="hidden" name="user_id" value="{{ $user['id'] }}">
+                <input type="hidden" name="user_id" value="{{ $user_id }}">
                 <input type="text" name="folder" placeholder="ファイル名を入力">
                 <button type="submit" class="btn btn-success">作成</button>
             </form>
+            <a href="{{ route('folder.delete', ['id' => $select_folder->id]) }}" class="btn btn-danger">削除</a>
+            {{-- <form method="POST" action="{{ route('delete.folder', ['id'] => $folder->id ) }}">
+                @csrf
+                <button type="submit" class="btn btn-danger">削除</button>
+            </form> --}}
             {{-- <a href="{{ route('memo.create') }}" class="btn btn-success">メモ作成</a> --}}
             <!-----省略----->
         {{-- <form class="w-100 h-100" method="post">
@@ -43,13 +48,13 @@
             </div>
         </form> --}}
              {{-- <button type="submit" class="btn btn-danger" value="{{ $select_folder->id }}" formaction="{{ route('folder.delete')}}">ファイルの削除</button> --}}
-            <a href="{{ route('folder.add') }}" class="btn btn-success">フォルダの作成</a>
-            <a href="{{ route('folder.delete', ['id' => $select_folder->id] )}}" class="btn btn-danger">フォルダの削除</a>
+            {{-- <a href="{{ route('folder.delete', ['id' => $select_folder->id] )}}" class="btn btn-danger">フォルダの削除</a> --}}
             @if ($folders->count() === 0)
                 <div class="pl-3 pt-3 h5 text-info text-center">
                     メモがありません。
                 </div>
             @endif
+
             @foreach ($folders as $folder)
                 <a href="{{ route('folder.select', ['id' => $folder->id])}}"
                     class="list-group-item list-group-item-action @if($select_folder){{$select_folder->id == $folder->id ? 'active' : ''}}@endif">

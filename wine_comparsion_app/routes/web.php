@@ -30,9 +30,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
     Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
+    Route::post('/mymemo/create_folder', [FolderController::class, 'create_folder'])->name('create.folder');
+    Route::post('mymemo/delete_folder', [FolderController::class, 'folder_delete'])->name('delete.folder');
     Route::get('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
     Route::get('mymemo/folder/select', [FolderController::class, 'select'])->name('folder.select');
-    Route::get('/mymemo/folder/delete', [FolderController::class, 'folder_delete'])->name('folder.delete');
+    Route::get('/mymemo/folder/delete/{id}', [FolderController::class, 'folder_delete'])->name('folder.delete');
     // Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
     // Route::get('folder/memo', [FolderController::class, 'index'])->name('folder_index');
     // Route::get('/folder/{id}/memos', [FolderController::class, 'index'])->name('folder.index');
