@@ -19,8 +19,7 @@ class CreateItemsTable extends Migration
             $table->text('content');
             $table->integer('types_id');
             $table->integer('countries_id');
-            $table->integer('grapes_types_id');
-            $table->integer('taste_maps_id');
+            $table->integer('grapes_id');
             $table->string('country_taste', 1);
             $table->string('grape_taste', 1);
             $table->string('taste_category', 2);
