@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFoldersTable extends Migration
+class CreateAromaCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateFoldersTable extends Migration
      */
     public function up()
     {
-        Schema::create('folders', function (Blueprint $table) {
+        Schema::create('aroma_categories', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
-            $table->integer('status')->default(1);
-            $table->string('name');
+            $table->integer('aroma_subcategories_id');
+            $table->string('aroma_type', 100);
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateFoldersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('folders');
+        Schema::dropIfExists('aroma_categories');
     }
 }

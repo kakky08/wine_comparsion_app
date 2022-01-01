@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Folder;
+use App\Models\Memo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -69,7 +70,16 @@ class FolderController extends Controller
         return redirect()->route('mymemo.index');
     } */
 
-    public function create_memo(Request $request)
+    public function create_memo(Request $request, $id)
     {
+        $data = $request->all();
+
+        Memo::create([
+            'user_id' => $data['user_id'],
+            'folder_id' => $id,
+            'memo_name' => $data['folder']
+        ]);
+
+        return redirect()->route('mymemo.index');
     }
 }
