@@ -16,10 +16,22 @@ class CreateMemosTable extends Migration
         Schema::create('memos', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id');
-            $table->string('title')->nullable();
-            $table->integer('number');
-            $table->string('kind');
+            $table->bigInteger('folder_id');
+            $table->integer('countries_id');
+            $table->integer('types_id');
+            $table->integer('grapes_id');
+            $table->integer('aroma_categories_id');
+            $table->string('name');
             $table->text('content');
+            $table->integer('comprehensive_evaluation');
+            $table->integer('flavor');
+            $table->integer('bitter_taste');
+            $table->integer('afterglow');
+            $table->integer('taste');
+            $table->integer('bodied');
+            $table->integer('sweet_taste');
+            $table->integer('fruit_taste');
+            $table->integer('acidity_taste');
             $table->timestamps();
         });
     }
