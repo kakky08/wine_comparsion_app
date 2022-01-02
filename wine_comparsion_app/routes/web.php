@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\FolderController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\MemoController;
+use App\Http\Controllers\ProductRegistrationController;
 use App\Models\Folder;
 
 /*
@@ -35,6 +36,17 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
     Route::get('mymemo/folder/select', [FolderController::class, 'select'])->name('folder.select');
     Route::get('/mymemo/folder/delete/{id}', [FolderController::class, 'folder_delete'])->name('folder.delete');
+    Route::get('/product_registration', [ProductRegistrationController::class, 'show'])->name('product.registration');
+    Route::post('/product_registration/item_add', [ProductRegistrationController::class, 'item_add'])->name('item.add');
+    Route::get('/product_registration/category_edit', [ProductRegistrationController::class, 'category_edit'])->name('category.edit');
+    Route::post('/product_registration/category_edit/type_add', [ProductRegistrationController::class, 'type_add'])->name('type.add');
+    Route::post('/product_registration/category_edit/country_add', [ProductRegistrationController::class, 'country_add'])->name('country.add');
+    Route::post('/product_registration/category_edit/grape_add', [ProductRegistrationController::class, 'grape_add'])->name('grape.add');
+    Route::get('/product_registration/category_delete', [ProductRegistrationController::class, 'category_delete'])->name('category.delete');
+    Route::post('/product_registration/category_edit/type_delete', [ProductRegistrationController::class, 'type_delete'])->name('type.delete');
+    Route::post('/product_registration/category_edit/country_delete', [ProductRegistrationController::class, 'country_delete'])->name('country.delete');
+    Route::post('/product_registration/category_edit/grape_delete', [ProductRegistrationController::class, 'grape_delete'])->name('grape.delete');
+
     // Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
     // Route::get('folder/memo', [FolderController::class, 'index'])->name('folder_index');
     // Route::get('/folder/{id}/memos', [FolderController::class, 'index'])->name('folder.index');

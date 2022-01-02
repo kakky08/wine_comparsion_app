@@ -31,34 +31,26 @@
         <div class="col-md-2 p-0" style="background-color:white;">
             <a href="{{ route('product.registration')}}">商品の追加</a>
             <a href="{{ route('category.edit') }}">カテゴリの追加</a>
-            <a href="{{ route('category.delete')}}">カテゴリの削除</a>
 
         </div>
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
-            <form method="POST" action="{{ route('item.add') }}">
+            <form method="POST" action="{{ route('type.add') }}">
                 @csrf
-                {{-- <input type="hidden" name='user_id' value={{ $user_id }}> --}}
-                <input type="text" name="name" placeholder="ワイン名">
-                <textarea name="content" rows="6"></textarea>
-                <input type="radio" name="level" value="ok"> 完全に理解した</label>
-                <select name="type">
-                    @foreach ($types as $type)
-                        <option value="{{ $type['id'] }}">{{ $type['type']}}</option>
-                    @endforeach
-                </select>
-                <select name="country">
-                    @foreach ($countries as $country)
-                        <option value="{{ $country['id'] }}">{{ $country['country']}}</option>
-                    @endforeach
-                </select>
-                <div class="input-group mb-3">
-                    <select class="form-select" name="grape">
-                        @foreach ($grapes as $grape)
-                            <option value="{{ $grape['id'] }}">{{ $grape['grape'] }}</option>
-                        @endforeach
-                    </select>
-                    <input type="number" class="form-control" name="value">
-                </div>
+                <label for="exampleFormControlInput1" class="form-label">ワインの種類を追加</label>
+                <input type="text" name="type" placeholder="ワインの種類">
+                <button type="submit" class="btn btn-success">追加</button>
+            </form>
+            <form method="POST" action="{{ route('country.add') }}">
+                @csrf
+                <label for="exampleFormControlInput1" class="form-label">生産国を追加</label>
+                <input type="text" name="country" placeholder="生産国">
+                <button type="submit" class="btn btn-success">追加</button>
+            </form>
+            <form method="POST" action="{{ route('grape.add') }}">
+                @csrf
+                <label for="exampleFormControlInput1" class="form-label">ブドウ名を追加</label>
+                <input type="text" name="grape" placeholder="ブドウ名">
+                <input type="number" name="value" placeholder="固定値">
                 <button type="submit" class="btn btn-success">追加</button>
             </form>
 
