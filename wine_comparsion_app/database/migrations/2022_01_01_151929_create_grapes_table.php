@@ -16,6 +16,7 @@ class CreateGrapesTable extends Migration
         Schema::create('grapes', function (Blueprint $table) {
             $table->id();
             $table->string('grape', 50);
+            $table->integer('value');
             $table->timestamps();
         });
     }

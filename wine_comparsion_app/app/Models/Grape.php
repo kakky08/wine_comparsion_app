@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Grape extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'grape',
+        'value',
+    ];
 }
