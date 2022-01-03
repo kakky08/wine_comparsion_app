@@ -34,8 +34,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/mymemo/create_folder', [FolderController::class, 'create_folder'])->name('create.folder');
     Route::post('mymemo/delete_folder', [FolderController::class, 'folder_delete'])->name('delete.folder');
     Route::get('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
-    Route::get('mymemo/folder/select', [FolderController::class, 'select'])->name('folder.select');
+    Route::get('mymemo/folder/select', [FolderController::class, 'folder_select'])->name('folder.select');
     Route::get('/mymemo/folder/delete/{id}', [FolderController::class, 'folder_delete'])->name('folder.delete');
+    Route::get('/mymemo/memo/create', [MemoController::class, 'createView'])->name('createView');
+    // Route::get('/mymemo/folder/{id}/memo/create', [FolderController::class, 'memo_create'])->name('memo.create');
     Route::get('/product_registration', [ProductRegistrationController::class, 'show'])->name('product.registration');
     Route::get('/product_registration/item_add', [ProductRegistrationController::class, 'show_item_add'])->name('show.item.add');
     Route::post('/product_registration/item_add', [ProductRegistrationController::class, 'item_add'])->name('item.add');

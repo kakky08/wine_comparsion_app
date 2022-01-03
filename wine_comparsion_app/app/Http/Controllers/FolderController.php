@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Auth;
 class FolderController extends Controller
 {
 
-    private $folder_id;
+
+    /**
+     * メモ一覧画面の表示
+     */
     public function index()
     {
         $user_id = Auth::id();
@@ -21,6 +24,10 @@ class FolderController extends Controller
             'user_id' => $user_id,
         ]);
     }
+
+    /**
+     * フォルダの作成
+     */
 
     public function create_folder(Request $request)
     {
@@ -41,6 +48,10 @@ class FolderController extends Controller
         return redirect()->route('mymemo.index');
     } */
 
+    /**
+     * フォルダの削除
+     */
+
     public function folder_delete($id)
     {
         $user_id = Auth::id();
@@ -49,26 +60,37 @@ class FolderController extends Controller
         return redirect()->route('mymemo.index');
     }
 
-    public function select(Request $request)
+    /**
+     * フォルダの選択
+     */
+
+
+    public function folder_select(Request $request)
     {
         $folder_id = Folder::find($request->id);
         session()->put('select_folder', $folder_id);
         return redirect()->route('mymemo.index');
     }
 
-    public function memo_create(Request $request)
-    {
-    }
+    /**
+     * メモの新規作成画面の表示
+     */
 
-    /* public function folder_delete(Request $request)
+    /* public function memo_createView()
     {
-        Folder::find($request->id)->delete();
-        session()->remove('select_folder');
-
-        return redirect()->route('mymemo.index');
+        $user_id = Auth::id();
+        $folders = Folder::where('user_id', $user_id)->orderBy('updated_at', 'desc')->get();
+        return view('show_memo_createView', [
+            'folders' => $folders,
+            'select_folder' => session()->get('select_folder'),
+            'user_id' => $user_id,
+        ]);
     } */
+    /**
+     * メモの作成
+     */
 
-    public function create_memo(Request $request, $id)
+    public function memo_create(Request $request, $id)
     {
         $data = $request->all();
 
@@ -80,4 +102,16 @@ class FolderController extends Controller
 
         return redirect()->route('mymemo.index');
     }
+
+    /**
+     * メモの編集
+     */
+
+    /**
+     * メモの選択
+     */
+
+    /**
+     * メモの削除
+     */
 }

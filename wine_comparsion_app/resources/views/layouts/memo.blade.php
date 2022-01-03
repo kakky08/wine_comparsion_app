@@ -98,15 +98,7 @@
         {{-- memoリスト一覧 ここから --}}
         {{-- 右のカラム --}}
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
-                   {{--  @if ($select_memo)
-                        <div>
-                            <h5>{{ $select_memo->title }}</h5>
-                            <h6>{{ $select_memo->kind }}</h6>
-                            <a href="/memo/{{ $select_memo->id}}/edit" class="btn btn-success">メモの編集</a>
-                        </div>
-                    @endif --}}
-
-
+            @yield('memo')
         </div>
     </div>
 </div>

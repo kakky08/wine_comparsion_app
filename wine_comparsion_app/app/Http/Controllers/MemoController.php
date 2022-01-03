@@ -11,104 +11,47 @@ class MemoController extends Controller
 {
 
 
-    // /**
-    //  * 初期表示
-    //  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-    //  */
+    /**
+     * メモの新規作成画面の表示
+     */
 
-    // public function index($id)
-    // {
-    //     $folders = Folder::all();
+    public function createView()
+    {
+        $user_id = Auth::id();
+        $folders = Folder::where('user_id', $user_id)->orderBy('updated_at', 'desc')->get();
+        return view('memo_create', [
+            'folders' => $folders,
+            'select_folder' => session()->get('select_folder'),
+            'user_id' => $user_id,
+        ]);
+    }
+    /**
+     * メモの作成
+     */
 
-    //     $current_folder = Folder::find($id);
-    //     $memos = Memo::where('folder_id', $current_folder->id)->orderBy('updated_at', 'desc')->get();
+    public function create(Request $request)
+    {
+        $user_id = Auth::id();
+        Memo::create([
+            'user_id' => $user_id,
+            'folder_id' => $request->folder_id,
+            'countries_id' => $request->countries_id,
+            'type_id' => $request->type_id,
+            'grape_id' => $request->grape_id,
+            'aroma_category_id' => $request->aroma_category_id,
+            'name' => $request->name,
+            'content' => $request->content,
+            'comprehensive_evaluation' => $request->comprehensive_evaluation,
+            'flavor' => $request->flavor,
+            'bitter_taste' => $request->bitter_taste,
+            'afterglow' => $request->afterglow,
+            'taste' => $request->taste,
+            'bodied' => $request->bodied,
+            'sweet_taste' => $request->sweet_taste,
+            'fruit_taste' => $request->fruit_taste,
+            'acidity_taste' => $request->acidity_taste,
+        ]);
 
-    //     return view('memos_list', [
-    //         'folders' => $folders,
-    //         'current_folder_id' => $current_folder->id,
-    //         'memos' => $memos,
-    //         'select_memo' => session()->get('select_memo')
-    //     ]);
-    // }
-
-    // public function create()
-    // {
-    //     return view('create_memo');
-    // }
-
-    // /**
-    //  * メモの追加
-    //  * @return \Illuminate\Http\RedirectResponse
-    //  */
-
-    // public function add(Request $request)
-    // {
-    //     Memo::create([
-    //         'user_id' => Auth::id(),
-    //         'title' => $request->title,
-    //         'number' => $request->number,
-    //         'kind' => $request->kind,
-    //         'content' => $request->content,
-    //     ]);
-
-    //     return redirect()->route('memo.index');
-    // }
-
-    // /**
-    //  * メモの選択
-    //  * @param Request $request
-    //  * @return \Illuminate\Http\RedirectResponse
-    //  */
-
-    // public function select(Request $request)
-    // {
-    //     $memo = Memo::find($request->id);
-    //     session()->put('select_memo', $memo);
-    //     return redirect()->route('memo.index');
-    // }
-
-    // /**
-    //  * メモの編集
-    //  * @param int $id
-    //  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-    //  */
-
-    // public function edit($id)
-    // {
-
-    //     $memo = Memo::findOrFail($id);
-    //     return view('edit_memo')->with('memo', $memo);
-    // }
-
-    // /**
-    //  * メモの更新
-    //  * @param Request $request
-    //  * @param int $id
-    //  * @return \Illuminate\Http\RedirectResponse
-    //  */
-
-    // public function update(Request $request, $id)
-    // {
-    //     $memo = Memo::findOrFail($id);
-    //     $memo->title = $request->title;
-    //     $memo->kind = $request->kind;
-    //     $memo->save();
-
-    //     // メモ一覧画面へリダイレクトする
-    //     return redirect()->route('memo.index');
-    // }
-
-    // /**
-    //  * メモの削除
-    //  * @param Request $request
-    //  * @return \Illuminate\Http\RedirectResponse
-    //  */
-
-    // public function delete(Request $request, $id)
-    // {
-    //     Memo::find($id);
-    //     session()->remove('select_memo');
-
-    //     return redirect()->route('memo.imdex');
-    // }
+        return redirect()->route('mymemo.index');
+    }
 }
