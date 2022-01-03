@@ -10,11 +10,10 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{{ route('items_list.index') }}">ワインを探す</a>
-                <a class="nav-link" href="{{ route('mymemo.index') }}">メモ帳</a>
-                <a class="nav-link" href="#">お気に入り</a>
-                <a class="nav-link" href="{{ route('mypage.index') }}">マイページ</a>
-                <a class="nav-link" href="#">ログアウト</a>
+                <a class="nav-link active" aria-current="page" href="{{ route('product.registration') }}">商品管理</a>
+                <a class="nav-link" href="{{ route('show.item.add')}}">商品の追加</a>
+                <a class="nav-link" href="{{ route('category.edit') }}">カテゴリの追加</a>
+                <a class="nav-link" href="{{ route('category.delete')}}">カテゴリの削除</a>
             </div>
         </div>
     </div>
@@ -29,8 +28,6 @@
         {{-- サイドバー ここまで--}}
         {{-- memoリスト一覧 ここから --}}
         <div class="col-md-2 p-0" style="background-color:white;">
-            <a href="{{ route('product.registration')}}">商品の追加</a>
-            <a href="{{ route('category.edit') }}">カテゴリの追加</a>
 
         </div>
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">

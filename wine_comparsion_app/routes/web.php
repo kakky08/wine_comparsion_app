@@ -37,7 +37,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('mymemo/folder/select', [FolderController::class, 'select'])->name('folder.select');
     Route::get('/mymemo/folder/delete/{id}', [FolderController::class, 'folder_delete'])->name('folder.delete');
     Route::get('/product_registration', [ProductRegistrationController::class, 'show'])->name('product.registration');
+    Route::get('/product_registration/item_add', [ProductRegistrationController::class, 'show_item_add'])->name('show.item.add');
     Route::post('/product_registration/item_add', [ProductRegistrationController::class, 'item_add'])->name('item.add');
+    Route::get('/product_registration/item_detail/{id}', [ProductRegistrationController::class, 'item_detail'])->name('item.detail');
     Route::get('/product_registration/category_edit', [ProductRegistrationController::class, 'category_edit'])->name('category.edit');
     Route::post('/product_registration/category_edit/type_add', [ProductRegistrationController::class, 'type_add'])->name('type.add');
     Route::post('/product_registration/category_edit/country_add', [ProductRegistrationController::class, 'country_add'])->name('country.add');

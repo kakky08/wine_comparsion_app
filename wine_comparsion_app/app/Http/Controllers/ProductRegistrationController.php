@@ -12,17 +12,25 @@ class ProductRegistrationController extends Controller
 {
     public function show()
     {
+        $items = Item::get();
+
+        return view('product_registration', [
+            'items' => $items,
+        ]);
+    }
+
+    public function show_item_add()
+    {
         $types = Type::get();
         $countries = Country::get();
         $grapes = Grape::get();
 
-        return view('product_registration', [
+        return view('item_add', [
             'types' => $types,
             'countries' => $countries,
             'grapes' => $grapes,
         ]);
     }
-
     public function item_add(Request $request)
     {
         $data = $request->all();
@@ -44,6 +52,15 @@ class ProductRegistrationController extends Controller
         ]);
 
         return redirect()->route('product.registration');
+    }
+
+    public function item_detail($id)
+    {
+        $data = Item::where('id', $id)->get();
+
+        return view('item_detail', [
+            'data' => $data,
+        ]);
     }
 
     public function category_edit()
@@ -78,8 +95,9 @@ class ProductRegistrationController extends Controller
     public function grape_add(Request $request)
     {
         $data = $request->all();
+        //TODO
         Grape::create([
-            'grape' => $data['grape'],
+            'grape' => $request->grape,
             'value' => $data['value'],
         ]);
 
@@ -92,11 +110,8 @@ class ProductRegistrationController extends Controller
         $countries = Country::get();
         $grapes = Grape::get();
 
-        return view('category_delete', [
-            'types' => $types,
-            'countries' => $countries,
-            'grapes' => $grapes,
-        ]);
+        //TODO
+        return view('category_delete', compact('types', 'countries', 'grapes'));
     }
 
     public function type_delete(Request $request)
