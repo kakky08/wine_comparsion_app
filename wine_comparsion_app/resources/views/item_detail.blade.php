@@ -31,37 +31,7 @@
 
         </div>
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">ワイン名</th>
-                        <th scope="col">説明</th>
-                        <th scope="col">種類</th>
-                        <th scope="col">生産国</th>
-                        <th scope="col">ブドウの種類</th>
-                        <th scope="col">生産国による味わい</th>
-                        <th scope="col">ブドウによる味わい</th>
-                        <th scope="col">味わいマップ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($items as $item)
-                        <tr data-href="{{ route('category.delete', ['id' => $item['id']]) }}">
-                            <th scope="row">{{ $item['id'] }}</th>
-                            <td>{{ $item['name'] }}</td>
-                            <td>{{ $item['content'] }}</td>
-                            <td>{{ $item['types_id'] }}</td>
-                            <td>{{ $item['countries_id'] }}</td>
-                            <td>{{ $item['grapes_id'] }}</td>
-                            <td>{{ $item['country_taste'] }}</td>
-                            <td>{{ $item['grape_taste'] }}</td>
-                            <td>{{ $item['taste_category'] }}</td>
-                        </tr>
-                        @endforeach
-                </tbody>
-            </table>
-            <a href="{{ route('item.detail', ['id' => 1]) }}">移動</a>
+            <p>{{ $data['name'] }}</p>
         </div>
     </div>
 </div>

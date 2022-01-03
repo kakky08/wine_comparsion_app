@@ -30,7 +30,7 @@
                 <input type="text" name="folder" placeholder="ファイル名を入力">
                 <button type="submit" class="btn btn-success">作成</button>
             </form>
-            <a href="{{ route('folder.delete', ['id' => $select_folder->id]) }}" class="btn btn-danger">削除</a>
+            {{-- <a href="{{ route('folder.delete', ['id' => $select_folder->id]) }}" class="btn btn-danger">削除</a> --}}
             {{-- <form method="POST" action="{{ route('delete.folder', ['id'] => $folder->id ) }}">
                 @csrf
                 <button type="submit" class="btn btn-danger">削除</button>
@@ -51,15 +51,16 @@
             {{-- <a href="{{ route('folder.delete', ['id' => $select_folder->id] )}}" class="btn btn-danger">フォルダの削除</a> --}}
             @if ($folders->count() === 0)
                 <div class="pl-3 pt-3 h5 text-info text-center">
-                    メモがありません。
+                    フォルダがありません。
                 </div>
             @endif
 
             @foreach ($folders as $folder)
+            {{-- {{dd($folder)}} --}}
                 <a href="{{ route('folder.select', ['id' => $folder->id])}}"
                     class="list-group-item list-group-item-action @if($select_folder){{$select_folder->id == $folder->id ? 'active' : ''}}@endif">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{ $folder->folder_name }} </h5>
+                    <h5 class="mb-1">{{ $folder->name }} </h5>
                     <small>{{ date('Y/m/d H:i', strtotime($folder->updated_at)) }}</small>
                 </div>
                 </a>

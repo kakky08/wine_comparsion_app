@@ -31,37 +31,33 @@
 
         </div>
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">ワイン名</th>
-                        <th scope="col">説明</th>
-                        <th scope="col">種類</th>
-                        <th scope="col">生産国</th>
-                        <th scope="col">ブドウの種類</th>
-                        <th scope="col">生産国による味わい</th>
-                        <th scope="col">ブドウによる味わい</th>
-                        <th scope="col">味わいマップ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($items as $item)
-                        <tr data-href="{{ route('category.delete', ['id' => $item['id']]) }}">
-                            <th scope="row">{{ $item['id'] }}</th>
-                            <td>{{ $item['name'] }}</td>
-                            <td>{{ $item['content'] }}</td>
-                            <td>{{ $item['types_id'] }}</td>
-                            <td>{{ $item['countries_id'] }}</td>
-                            <td>{{ $item['grapes_id'] }}</td>
-                            <td>{{ $item['country_taste'] }}</td>
-                            <td>{{ $item['grape_taste'] }}</td>
-                            <td>{{ $item['taste_category'] }}</td>
-                        </tr>
+            <form method="POST" action="{{ route('item.add') }}">
+                @csrf
+                {{-- <input type="hidden" name='user_id' value={{ $user_id }}> --}}
+                <input type="text" name="name" placeholder="ワイン名">
+                <textarea name="content" rows="6"></textarea>
+                <input type="radio" name="level" value="ok"> 完全に理解した</label>
+                <select name="type">
+                    @foreach ($types as $type)
+                        <option value="{{ $type['id'] }}">{{ $type['type']}}</option>
+                    @endforeach
+                </select>
+                <select name="country">
+                    @foreach ($countries as $country)
+                        <option value="{{ $country['id'] }}">{{ $country['country']}}</option>
+                    @endforeach
+                </select>
+                <div class="input-group mb-3">
+                    <select class="form-select" name="grape">
+                        @foreach ($grapes as $grape)
+                            <option value="{{ $grape['id'] }}">{{ $grape['grape'] }}</option>
                         @endforeach
-                </tbody>
-            </table>
-            <a href="{{ route('item.detail', ['id' => 1]) }}">移動</a>
+                    </select>
+                    <input type="number" class="form-control" name="value">
+                </div>
+                <button type="submit" class="btn btn-success">追加</button>
+            </form>
+
         </div>
     </div>
 </div>
