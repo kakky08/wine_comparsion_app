@@ -15,7 +15,7 @@ class CreateAromaSubcategoriesTable extends Migration
     {
         Schema::create('aroma_subcategories', function (Blueprint $table) {
             $table->id();
-            $table->integer('further_subcategories_id');
+            $table->integer('further_subcategory_id');
             $table->string('aroma_type', 100);
             $table->timestamps();
         });

@@ -15,8 +15,8 @@ class CreateCountryTastesTable extends Migration
     {
         Schema::create('country_tastes', function (Blueprint $table) {
             $table->id();
-            $table->integer('countries_id');
-            $table->integer('types_id');
+            $table->integer('country_id');
+            $table->integer('type_id');
             $table->string('teste');
             $table->timestamps();
         });

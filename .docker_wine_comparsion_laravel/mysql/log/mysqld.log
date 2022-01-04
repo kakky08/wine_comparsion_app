@@ -1052,3 +1052,137 @@ Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Comm
 2021-12-28T23:54:10.511176Z 0 [Note] Event Scheduler: Loaded 0 events
 2021-12-28T23:54:10.513062Z 0 [Note] mysqld: ready for connections.
 Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2022-01-04T14:37:44.100486Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2022-01-04T14:37:44.117785Z 0 [Note] mysqld (mysqld 5.7.36) starting as process 1 ...
+2022-01-04T14:37:44.123891Z 0 [Warning] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+2022-01-04T14:37:44.137403Z 0 [Note] InnoDB: PUNCH HOLE support available
+2022-01-04T14:37:44.139529Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2022-01-04T14:37:44.140475Z 0 [Note] InnoDB: Uses event mutexes
+2022-01-04T14:37:44.141349Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2022-01-04T14:37:44.142301Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-01-04T14:37:44.142931Z 0 [Note] InnoDB: Using Linux native AIO
+2022-01-04T14:37:44.145714Z 0 [Note] InnoDB: Number of pools: 1
+2022-01-04T14:37:44.149102Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2022-01-04T14:37:44.163195Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2022-01-04T14:37:44.204052Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-01-04T14:37:44.218225Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2022-01-04T14:37:44.364554Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2022-01-04T14:37:44.382509Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 12747058
+2022-01-04T14:37:44.384214Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 12747067
+2022-01-04T14:37:44.385316Z 0 [Note] InnoDB: Database was not shutdown normally!
+2022-01-04T14:37:44.386744Z 0 [Note] InnoDB: Starting crash recovery.
+2022-01-04T14:37:44.801100Z 0 [ERROR] InnoDB: In file './wine_app/failed_jobs.ibd', tablespace id and flags are 84 and 33, but in the InnoDB data dictionary they are 40 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.802019Z 0 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:37:44.803690Z 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:37:44.805432Z 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-01-04T14:37:44.806467Z 0 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/failed_jobs`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.809176Z 0 [Warning] InnoDB: Ignoring tablespace `wine_app/failed_jobs` because it could not be opened.
+2022-01-04T14:37:44.814323Z 0 [ERROR] InnoDB: In file './wine_app/folders.ibd', tablespace id and flags are 86 and 33, but in the InnoDB data dictionary they are 45 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.815457Z 0 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:37:44.816150Z 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:37:44.817673Z 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-01-04T14:37:44.819074Z 0 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/folders`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.819718Z 0 [Warning] InnoDB: Ignoring tablespace `wine_app/folders` because it could not be opened.
+2022-01-04T14:37:44.824930Z 0 [ERROR] InnoDB: In file './wine_app/memos.ibd', tablespace id and flags are 85 and 33, but in the InnoDB data dictionary they are 41 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.826163Z 0 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:37:44.826974Z 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:37:44.828240Z 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-01-04T14:37:44.828935Z 0 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/memos`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.829572Z 0 [Warning] InnoDB: Ignoring tablespace `wine_app/memos` because it could not be opened.
+2022-01-04T14:37:44.834218Z 0 [ERROR] InnoDB: In file './wine_app/migrations.ibd', tablespace id and flags are 81 and 33, but in the InnoDB data dictionary they are 37 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.836112Z 0 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:37:44.837844Z 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:37:44.838906Z 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-01-04T14:37:44.839800Z 0 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/migrations`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.840530Z 0 [Warning] InnoDB: Ignoring tablespace `wine_app/migrations` because it could not be opened.
+2022-01-04T14:37:44.844650Z 0 [ERROR] InnoDB: In file './wine_app/password_resets.ibd', tablespace id and flags are 83 and 33, but in the InnoDB data dictionary they are 39 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.845182Z 0 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:37:44.845781Z 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:37:44.846506Z 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-01-04T14:37:44.847349Z 0 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/password_resets`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.848023Z 0 [Warning] InnoDB: Ignoring tablespace `wine_app/password_resets` because it could not be opened.
+2022-01-04T14:37:44.853249Z 0 [ERROR] InnoDB: In file './wine_app/users.ibd', tablespace id and flags are 82 and 33, but in the InnoDB data dictionary they are 38 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.853940Z 0 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:37:44.854549Z 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:37:44.855516Z 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-01-04T14:37:44.856201Z 0 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/users`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:44.856866Z 0 [Warning] InnoDB: Ignoring tablespace `wine_app/users` because it could not be opened.
+2022-01-04T14:37:44.862651Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2022-01-04T14:37:44.863110Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-01-04T14:37:44.866289Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-01-04T14:37:44.940531Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-01-04T14:37:44.945231Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2022-01-04T14:37:44.945810Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2022-01-04T14:37:44.947098Z 0 [Note] InnoDB: 5.7.36 started; log sequence number 12747067
+2022-01-04T14:37:44.948055Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-01-04T14:37:44.948314Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2022-01-04T14:37:44.966402Z 0 [ERROR] InnoDB: Page [page id: space=13, page number=3] log sequence number 12748633 is in the future! Current system log sequence number 12747086.
+2022-01-04T14:37:44.967333Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2022-01-04T14:37:44.972438Z 0 [ERROR] InnoDB: Page [page id: space=14, page number=3] log sequence number 12749749 is in the future! Current system log sequence number 12747086.
+2022-01-04T14:37:44.973045Z 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html for information about forcing recovery.
+2022-01-04T14:37:44.977411Z 0 [Note] InnoDB: Buffer pool(s) load completed at 220104 23:37:44
+2022-01-04T14:37:44.986406Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2022-01-04T14:37:44.987111Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2022-01-04T14:37:44.987588Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2022-01-04T14:37:44.988182Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2022-01-04T14:37:44.995397Z 0 [Warning] CA certificate ca.pem is self signed.
+2022-01-04T14:37:44.996318Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2022-01-04T14:37:45.001693Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2022-01-04T14:37:45.002896Z 0 [Note] IPv6 is available.
+2022-01-04T14:37:45.003690Z 0 [Note]   - '::' resolves to '::';
+2022-01-04T14:37:45.004254Z 0 [Note] Server socket created on IP: '::'.
+2022-01-04T14:37:45.009677Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2022-01-04T14:37:45.333361Z 0 [Note] Event Scheduler: Loaded 0 events
+2022-01-04T14:37:45.334364Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.36'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2022-01-04T14:37:49.424034Z 2 [ERROR] InnoDB: Failed to find tablespace for table `wine_app`.`users` in the cache. Attempting to load the tablespace with space id 38
+2022-01-04T14:37:49.426145Z 2 [ERROR] InnoDB: In file './wine_app/users.ibd', tablespace id and flags are 82 and 33, but in the InnoDB data dictionary they are 38 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:49.426523Z 2 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:37:49.426947Z 2 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:37:49.427398Z 2 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/users`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:37:49.427933Z 2 [Warning] InnoDB: Table wine_app/users contains 8 user defined columns in InnoDB, but 11 columns in MySQL. Please check INFORMATION_SCHEMA.INNODB_SYS_COLUMNS and http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:37:49.428392Z 2 [Warning] InnoDB: Cannot open table wine_app/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:37:53.633688Z 3 [Note] InnoDB: Table `wine_app`.`users` is corrupted. Please drop the table and recreate it
+2022-01-04T14:37:53.634880Z 3 [Warning] InnoDB: Cannot open table wine_app/users from the internal data dictionary of InnoDB though the .frm file for the table exists. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:15.652254Z 4 [ERROR] InnoDB: Failed to find tablespace for table `wine_app`.`migrations` in the cache. Attempting to load the tablespace with space id 37
+2022-01-04T14:42:15.654890Z 4 [ERROR] InnoDB: In file './wine_app/migrations.ibd', tablespace id and flags are 81 and 33, but in the InnoDB data dictionary they are 37 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:15.655281Z 4 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:42:15.655671Z 4 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:42:15.656084Z 4 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/migrations`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:15.656605Z 4 [Warning] InnoDB: Cannot calculate statistics for table `wine_app`.`migrations` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:15.667240Z 4 [Warning] InnoDB: Cannot calculate statistics for table `wine_app`.`migrations` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.379411Z 5 [ERROR] InnoDB: Table `wine_app`.`aroma_categories` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.383286Z 5 [ERROR] InnoDB: Table `wine_app`.`aroma_subcategories` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.385873Z 5 [ERROR] InnoDB: Table `wine_app`.`countries` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.388365Z 5 [ERROR] InnoDB: Table `wine_app`.`country_tastes` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.390896Z 5 [ERROR] InnoDB: Failed to find tablespace for table `wine_app`.`failed_jobs` in the cache. Attempting to load the tablespace with space id 40
+2022-01-04T14:42:39.393001Z 5 [ERROR] InnoDB: In file './wine_app/failed_jobs.ibd', tablespace id and flags are 84 and 33, but in the InnoDB data dictionary they are 40 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.393426Z 5 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:42:39.393809Z 5 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:42:39.394150Z 5 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/failed_jobs`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.399948Z 5 [ERROR] InnoDB: Table `wine_app`.`favorite_tastes` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.403509Z 5 [ERROR] InnoDB: Table `wine_app`.`favorites` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.406399Z 5 [ERROR] InnoDB: Failed to find tablespace for table `wine_app`.`folders` in the cache. Attempting to load the tablespace with space id 45
+2022-01-04T14:42:39.408390Z 5 [ERROR] InnoDB: In file './wine_app/folders.ibd', tablespace id and flags are 86 and 33, but in the InnoDB data dictionary they are 45 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.408909Z 5 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:42:39.409309Z 5 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:42:39.409621Z 5 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/folders`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.414616Z 5 [ERROR] InnoDB: Table `wine_app`.`further_subcategories` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.417935Z 5 [ERROR] InnoDB: Table `wine_app`.`grapes` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.421163Z 5 [ERROR] InnoDB: Table `wine_app`.`items` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:42:39.424004Z 5 [ERROR] InnoDB: Failed to find tablespace for table `wine_app`.`memos` in the cache. Attempting to load the tablespace with space id 41
+2022-01-04T14:42:39.425789Z 5 [ERROR] InnoDB: In file './wine_app/memos.ibd', tablespace id and flags are 85 and 33, but in the InnoDB data dictionary they are 41 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.426268Z 5 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:42:39.426690Z 5 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:42:39.427096Z 5 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/memos`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.436015Z 5 [ERROR] InnoDB: Failed to find tablespace for table `wine_app`.`password_resets` in the cache. Attempting to load the tablespace with space id 39
+2022-01-04T14:42:39.438157Z 5 [ERROR] InnoDB: In file './wine_app/password_resets.ibd', tablespace id and flags are 83 and 33, but in the InnoDB data dictionary they are 39 and 33. Have you moved InnoDB .ibd files around without using the commands DISCARD TABLESPACE and IMPORT TABLESPACE? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.439155Z 5 [ERROR] InnoDB: Operating system error number 2 in a file operation.
+2022-01-04T14:42:39.439667Z 5 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-01-04T14:42:39.440079Z 5 [ERROR] InnoDB: Could not find a valid tablespace file for `wine_app/password_resets`. Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting-datadict.html for how to resolve the issue.
+2022-01-04T14:42:39.444589Z 5 [ERROR] InnoDB: Table `wine_app`.`types` does not exist in the InnoDB internal data dictionary though MySQL is trying to drop it. Have you copied the .frm file of the table to the MySQL database directory from another database? Please refer to http://dev.mysql.com/doc/refman/5.7/en/innodb-troubleshooting.html for how to resolve the issue.
+2022-01-04T14:43:12.694693Z 6 [ERROR] InnoDB: Operating system error number 17 in a file operation.
+2022-01-04T14:43:12.695352Z 6 [ERROR] InnoDB: Error number 17 means 'File exists'
+2022-01-04T14:43:12.695961Z 6 [Note] InnoDB: Some operating system error numbers are described at http://dev.mysql.com/doc/refman/5.7/en/operating-system-error-codes.html
+2022-01-04T14:43:12.696349Z 6 [ERROR] InnoDB: Cannot create file './wine_app/migrations.ibd'
+2022-01-04T14:43:12.696714Z 6 [ERROR] InnoDB: The file './wine_app/migrations.ibd' already exists though the corresponding table did not exist in the InnoDB data dictionary. Have you moved InnoDB .ibd files around without using the SQL commands DISCARD TABLESPACE and IMPORT TABLESPACE, or did mysqld crash in the middle of CREATE TABLE? You can resolve the problem by removing the file './wine_app/migrations.ibd' under the 'datadir' of MySQL.
