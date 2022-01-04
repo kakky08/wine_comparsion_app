@@ -17,10 +17,10 @@ class CreateMemosTable extends Migration
             $table->id();
             $table->bigInteger('user_id');
             $table->bigInteger('folder_id');
-            $table->integer('countries_id');
-            $table->integer('types_id');
-            $table->integer('grapes_id');
-            $table->integer('aroma_categories_id');
+            $table->integer('country_id');
+            $table->integer('type_id');
+            $table->integer('grape_id');
+            $table->integer('aroma_category_id');
             $table->string('name');
             $table->text('content');
             $table->integer('comprehensive_evaluation');

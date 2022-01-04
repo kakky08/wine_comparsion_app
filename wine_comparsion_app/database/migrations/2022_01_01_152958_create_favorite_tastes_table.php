@@ -15,7 +15,7 @@ class CreateFavoriteTastesTable extends Migration
     {
         Schema::create('favorite_tastes', function (Blueprint $table) {
             $table->id();
-            $table->integer('types_id');
+            $table->integer('type_id');
             $table->string('taste', 100);
             $table->string('favorite', 1);
             $table->timestamps();
