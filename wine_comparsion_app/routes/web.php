@@ -39,6 +39,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/mymemo/memo/create', [MemoController::class, 'createView'])->name('createView');
     Route::post('/mymemo/memo/add', [MemoController::class, 'create'])->name('memo.add');
     Route::get('mymemo/memo/select', [MemoController::class, 'select'])->name('memo.select');
+    Route::get('mymemo/memo/edit/{id}', [MemoController::class, 'editView'])->name('memo.editView');
+    Route::post('mymemo/memo/edit/{id}', [MemoController::class, 'edit'])->name('memo.edit');
 
     // Route::get('/mymemo/folder/{id}/memo/create', [FolderController::class, 'memo_create'])->name('memo.create');
     Route::get('/product_registration', [ProductRegistrationController::class, 'show'])->name('product.registration');

@@ -104,6 +104,7 @@
             {{-- {{dd($memo)}} --}}
             @if ($memos_list->count() !== 0)
                 <p>{{ $memo->name }}</p>
+                <a href="{{ route('memo.editView',['id' => $memo->id]) }}">編集</a>
             @endif
 
             {{-- @if ($memo == null)
