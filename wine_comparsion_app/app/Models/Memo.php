@@ -11,9 +11,21 @@ class Memo extends Model
 
     protected $fillable = [
         'user_id',
-        'title',
-        'number',
-        'kind',
-        'content'
+        'folder_id',
+        'country_id',
+        'type_id',
+        'grape_id',
+        'aroma_category_id',
+        'name',
+        'content',
+        'comprehensive_evaluation',
+        "flavor",
+        'bitter_taste',
+        'afterglow',
+        'taste',
+        'bodied',
+        'sweet_taste',
+        'fruit_taste',
+        'acidity_taste'
     ];
 }

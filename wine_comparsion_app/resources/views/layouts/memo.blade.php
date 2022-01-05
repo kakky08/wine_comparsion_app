@@ -71,6 +71,9 @@
         <div class="col-md-2 p-0" style="background-color:white;">
 
             <a href="{{ route('createView') }}">メモの作成</a>
+            @foreach ($memos_list as $memo)
+                <p>{{ $memo->name }}</p>
+            @endforeach
            {{--  @if ($memos->count() === 0)
                 <p>メモがありません</p>
             @endif
