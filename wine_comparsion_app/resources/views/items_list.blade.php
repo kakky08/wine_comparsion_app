@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="{{ route('items_list.index') }}">ワインを探す</a>
-                <a class="nav-link" href="{{ route('memo.index') }}">メモ帳</a>
+                <a class="nav-link" href="{{ route('mymemo.index') }}">メモ帳</a>
                 <a class="nav-link" href="#">お気に入り</a>
                 <a class="nav-link" href="{{ route('mypage.index') }}">マイページ</a>
                 <a class="nav-link" href="#">ログアウト</a>
@@ -137,82 +137,20 @@
             {{-- ワイン一覧ここから --}}
             <div class="container mb-5">
                 <div class="row g-2">
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                    @if ($items->count() === 0)
+                        <p>アイテムがありません</p>
+                    @endif
+                    @foreach ($items as $item)
+                        <div class="col-3">
+                            <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $item->name }}</h5>
+                                    <p class="card-text"></p>
+                                    <a href="#" class="btn btn-primary">詳細へ</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-3 border bg-light">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             {{-- ワイン一覧ここまで --}}
