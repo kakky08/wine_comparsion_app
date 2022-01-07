@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UsersTableSeeder::class);
         $this->call(MemosTableSeeder::class);
+        $this->call(FoldersTableSeeder::class);
+        $this->call(CountriesTableSeeder::class);
+        $this->call(GrapesTableSeeder::class);
+
         // \App\Models\User::factory(10)->create();
     }
 }

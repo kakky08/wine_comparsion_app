@@ -11,7 +11,7 @@
             @foreach ($folders as $folder)
             <option
             value="{{ $folder->id }}" id="folder"
-            @if($select_folder){{$select_folder->id == $contents->folder_id ? 'selected' : ''}}@endif
+            {{$folder->id == $contents->folder_id ? 'selected' : ''}}
             >
                 {{ $folder->name }}
             </option>

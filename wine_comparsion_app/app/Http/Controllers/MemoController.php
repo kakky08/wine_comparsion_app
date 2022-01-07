@@ -79,7 +79,7 @@ class MemoController extends Controller
 
     public function select(Request $request)
     {
-        $memo_id = Folder::find($request->id);
+        $memo_id = Memo::find($request->id);
         session()->put('memo_select', $memo_id);
         return redirect()->route('mymemo.index');
     }

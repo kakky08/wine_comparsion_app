@@ -14,13 +14,13 @@ class MemoFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => $this->faker->randomDigit(),
-            'folder_id',
-            'country_id',
+            'user_id' => $this->faker->numberBetween(1, 4),
+            'folder_id' => $this->faker->numberBetween(1, 10),
+            'country_id' => $this->faker->numberBetween(1, 10),
             'type_id' => $this->faker->numberBetween(1, 2),
-            'grape_id',
-            'aroma_category_id',
-            'name',
+            'grape_id' => $this->faker->numberBetween(1, 10),
+            'aroma_category_id' => $this->faker->numberBetween(1, 10),
+            'name' => $this->faker->realText(20),
             'content' => $this->faker->realText(100),
             'comprehensive_evaluation' => $this->faker->numberBetween(1, 5),
             "flavor" => $this->faker->numberBetween(1, 5),
