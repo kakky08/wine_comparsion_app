@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Memo;
 use Illuminate\Database\Seeder;
 
 class MemosTableSeeder extends Seeder
@@ -13,6 +14,6 @@ class MemosTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Memo::factory()->count(50)->create();
     }
 }
