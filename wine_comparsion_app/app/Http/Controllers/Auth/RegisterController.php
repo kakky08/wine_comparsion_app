@@ -68,6 +68,9 @@ class RegisterController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'type_id' => $request->type,
+            'country_id' => $request->country,
+            'favorite_taste_id' => $request->favorite,
         ]);
 
         $this->guard()->login($user);
