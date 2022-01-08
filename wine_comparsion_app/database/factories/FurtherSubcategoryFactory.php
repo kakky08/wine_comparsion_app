@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CountryFactory extends Factory
+class FurtherSubcategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,7 @@ class CountryFactory extends Factory
     public function definition()
     {
         return [
-            'country' => $this->faker->country(),
+            'aroma_type' => $this->faker->realText(10),
         ];
     }
 }

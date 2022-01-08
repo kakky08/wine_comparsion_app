@@ -17,7 +17,7 @@ class CreateCountryTastesTable extends Migration
             $table->id();
             $table->integer('country_id');
             $table->integer('type_id');
-            $table->string('teste');
+            $table->string('taste');
             $table->timestamps();
         });
     }

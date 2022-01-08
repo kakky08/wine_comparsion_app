@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CountryFactory extends Factory
+class FavoriteFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,8 @@ class CountryFactory extends Factory
     public function definition()
     {
         return [
-            'country' => $this->faker->country(),
+            'user_id' => $this->faker->numberBetween(1, 4),
+            'item_id' => $this->faker->numberBetween(1, 30),
         ];
     }
 }
