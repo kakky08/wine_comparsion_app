@@ -13,11 +13,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UsersTableSeeder::class);
-        $this->call(MemosTableSeeder::class);
-        $this->call(FoldersTableSeeder::class);
-        $this->call(CountriesTableSeeder::class);
-        $this->call(GrapesTableSeeder::class);
+        $this->call([
+            AromaCategoriesTableSeeder::class,
+            AromaSubcategoriesTableSeeder::class,
+            CountriesTableSeeder::class,
+            CountryTastesTableSeeder::class,
+            FavoritesTableSeeder::class,
+            FavoriteTastesTableSeeder::class,
+            FoldersTableSeeder::class,
+            FurtherSubcategoriesTableSeeder::class,
+            GrapesTableSeeder::class,
+            ItemsTableSeeder::class,
+            MemosTableSeeder::class,
+            TypesTableSeeder::class,
+            UsersTableSeeder::class,
+        ]);
 
         // \App\Models\User::factory(10)->create();
     }
