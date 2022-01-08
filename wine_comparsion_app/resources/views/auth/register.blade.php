@@ -72,11 +72,11 @@
                             <label for="type" class="col-md-4 col-form-label text-md-right">あなたの好きなタイプはどちらですか？</label>
 
                             <div class="form-check form-check-inline col-md-3">
-                                <input class="form-check-input" type="radio" name="type" id="type_red" value="option1">
-                                <label class="form-check-label" for="type_red">赤ワイン</label>
+                                <input class="form-check-input" type="radio" name="type" id="type_red" value="1">
+                                <label class="form-check-label" for="tyxpe_red">赤ワイン</label>
                             </div>
                             <div class="form-check form-check-inline col-md-3">
-                                <input class="form-check-input" type="radio" name="type" id="type_white" value="option2">
+                                <input class="form-check-input" type="radio" name="type" id="type_white" value="2">
                                 <label class="form-check-label" for="type_white">白ワイン</label>
                             </div>
                            {{--  <div class="col-md-6">

@@ -91,6 +91,25 @@
             {{-- おすすめ一覧ここから --}}
             <div class="container mb-5">
                 <div class="row g-2">
+                    {{-- {{dd($type_id)}} --}}
+                    {{-- {{ dd($country_taste) }} --}}
+
+                    {{-- {{dd($recommendations)}} --}}
+
+                    @if ($recommendations->count() === 0)
+                        <p>アイテムがありません</p>
+                    @endif
+                    @foreach ($recommendations as $recommendation)
+                        <div class="col-3">
+                            <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $recommendation->name }}</h5>
+                                    <p class="card-text"></p>
+                                    <a href="#" class="btn btn-primary">詳細へ</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                     <div class="col-3">
                         <div class="p-3 border bg-light"><img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
