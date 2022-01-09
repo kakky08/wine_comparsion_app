@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use RakutenRws_Client;
 
+use function PHPSTORM_META\type;
+
 class ItemsController extends Controller
 {
     public function index()
@@ -19,7 +21,8 @@ class ItemsController extends Controller
         $items = Item::get();
         $user_id = Auth::id();
 
-        $type = User::where('id', $user_id)->select('type_id')->first();
+
+        $type_id = User::where('id', $user_id)->select('type_id')->first();
         $country = User::where('id', $user_id)->select('country_id')->first();
         $favorite = User::where('id', $user_id)->select('favorite_taste_id')->first();
         /* if ($type_id === NULL) {
@@ -49,8 +52,8 @@ class ItemsController extends Controller
         /**
          * ログインユーザー情報からおすすめワインを検索
          */
-        $recommendations = Item::when(isset($type), function ($query) use ($type) {
-            $query->where('type_id', $type->type_id);
+        $recommendations = Item::when(isset($type_id), function ($query) use ($type_id) {
+            $query->where('type_id', $type_id->type_id);
         })->when(isset($country->country_taste), function ($query) use ($country) {
             $query->where('country_taste', $country->country_taste);
         })->when(isset($favorite->favorite_taste), function ($query) use ($favorite) {
@@ -61,6 +64,8 @@ class ItemsController extends Controller
         return view('items_list', [
             'items' => $items,
             'recommendations' => $recommendations,
+            'types' => Type::get(),
+            'countries' => Country::get(),
         ]);
     }
 }

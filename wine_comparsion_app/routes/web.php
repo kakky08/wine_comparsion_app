@@ -8,6 +8,7 @@ use App\Http\Controllers\FolderController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\MemoController;
 use App\Http\Controllers\ProductRegistrationController;
+use App\Http\Controllers\SearchController;
 use App\Models\Folder;
 
 /*
@@ -30,6 +31,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
+    Route::get('/top/search/type', [SearchController::class, 'type'])->name('search.type');
+    Route::get('/top/search/country', [SearchController::class, 'country'])->name('search.country');
     Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
     Route::post('/mymemo/create_folder', [FolderController::class, 'create_folder'])->name('create.folder');
     Route::post('mymemo/delete_folder', [FolderController::class, 'folder_delete'])->name('delete.folder');
