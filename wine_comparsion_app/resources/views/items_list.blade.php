@@ -19,7 +19,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $recommendation->name }}</h5>
                                     <p class="card-text"></p>
-                                    <a href="#" class="btn btn-primary">詳細へ</a>
+                                    <a href="{{ route('item.detail.information', ['id' => $recommendation->id]) }}" class="btn btn-primary">詳細へ</a>
                                 </div>
                             </div>
                         </div>
