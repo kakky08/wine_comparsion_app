@@ -33,6 +33,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
     Route::get('/top/search/type', [SearchController::class, 'type'])->name('search.type');
     Route::get('/top/search/country', [SearchController::class, 'country'])->name('search.country');
+    Route::get('/wine/detail/{id}', [ItemsController::class, 'detail'])->name('item.detail.information');
+    Route::get('/wine/favorite/add', [FavoriteController::class, 'add'])->name('favorite.add');
+    Route::get('/wine/favorite/delete', [FavoriteController::class, 'delete'])->name('favorite.delete');
     Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
     Route::post('/mymemo/create_folder', [FolderController::class, 'create_folder'])->name('create.folder');
     Route::post('mymemo/delete_folder', [FolderController::class, 'folder_delete'])->name('delete.folder');

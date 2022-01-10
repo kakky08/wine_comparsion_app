@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\Models\Favorite;
 use App\Models\FavoriteTaste;
+use App\Models\Grape;
 use App\Models\Item;
 use App\Models\Type;
 use App\Models\User;
@@ -67,5 +69,34 @@ class ItemsController extends Controller
             'types' => Type::get(),
             'countries' => Country::get(),
         ]);
+    }
+
+    public function detail($id)
+    {
+
+        $item = Item::where('id', $id)->first();
+        $is_favorite = $this->is_favorite($id);
+
+
+        return view('item_detailed_information', [
+
+            'item' => $item,
+            'types' => Type::get(),
+            'countries' => Country::get(),
+            'type_name' => Type::where('id', $item->type_id)->first(),
+            'country_name' => Country::where('id', $item->country_id)->first(),
+            'grape_name' => Grape::where('id', $item->grape_id)->first(),
+            'is_favorite' => $is_favorite,
+        ]);
+    }
+
+    public function is_favorite($id)
+    {
+        $user_id = Auth::id();
+        $favorite = Favorite::where('user_id', $user_id)->where('item_id', $id)->first();
+        if (is_null($favorite)) {
+            return true;
+        }
+        return false;
     }
 }
