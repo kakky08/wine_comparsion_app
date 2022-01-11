@@ -31,8 +31,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/top', [ItemsController::class, 'index'])->name('items_list.index');
+    Route::get('/top/search/keyword', [SearchController::class, 'keyword'])->name('search.keyword');
+    Route::post('/top/search/keyword', [SearchController::class, 'keyword'])->name('search.keyword');
     Route::get('/top/search/type', [SearchController::class, 'type'])->name('search.type');
     Route::get('/top/search/country', [SearchController::class, 'country'])->name('search.country');
+    Route::get('/top/search/detail', [SearchController::class, 'detail'])->name('search.detail');
+    Route::get('/top/search/by_type/{id}', [SearchController::class, 'by_type'])->name('select.by.type');
     Route::get('/wine/detail/{id}', [ItemsController::class, 'detail'])->name('item.detail.information');
     Route::get('/wine/favorite/add', [FavoriteController::class, 'add'])->name('favorite.add');
     Route::get('/wine/favorite/delete', [FavoriteController::class, 'delete'])->name('favorite.delete');
