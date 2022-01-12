@@ -68,4 +68,13 @@ class SearchController extends Controller
         // TODO compact記述に変更
         return view('search_items_list', compact('items', 'types', 'countries'));
     }
+
+    public function drink_comparison(Request $request)
+    {
+        $item = Item::where('id', $request->search)->first();
+        $results = Item::where('type_id', $item->type_id)->where('country_id', '!=', $item->country_id)->take(5)->get();
+        $types = Type::get();
+        $countries = Country::get();
+        return view('drink_comparison_list', compact('item', 'results', 'types', 'countries'));
+    }
 }
