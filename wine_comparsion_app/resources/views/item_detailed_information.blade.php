@@ -17,7 +17,10 @@
                     class="btn {{ $is_favorite ? 'btn-success' : 'btn-danger'}}"
                     name="favorite" vlaue="{{ $item->id }}">追加</button>
                     <button>お気に入り</button>
-                    <button>このワインの飲み比べワインを探す</button>
+                    <form method="GET" action="{{ route('drink.comparison') }}">
+                        <button type="submit" name="search" value="{{ $item->id }}">このワインの飲み比べワインを探す</button>
+                    </form>
+                    <a href="{{ route('drink.comparison') }}"  >検索</a>
                 </div>
             </div>
             {{-- ワイン一覧ここまで --}}

@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/top/search/detail', [SearchController::class, 'detail'])->name('search.detail');
     Route::get('/top/search/by_type/{id}', [SearchController::class, 'by_type'])->name('select.by.type');
     Route::get('/wine/detail/{id}', [ItemsController::class, 'detail'])->name('item.detail.information');
+    Route::get('wine/drink_comparison', [SearchController::class, 'drink_comparison'])->name('drink.comparison');
     Route::get('/wine/favorite/add', [FavoriteController::class, 'add'])->name('favorite.add');
     Route::get('/wine/favorite/delete', [FavoriteController::class, 'delete'])->name('favorite.delete');
     Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
