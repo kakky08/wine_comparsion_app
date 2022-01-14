@@ -19,12 +19,12 @@ class FolderController extends Controller
         $user_id = Auth::id();
         $folders = Folder::where('user_id', $user_id)->orderBy('updated_at', 'desc')->get();
         $select_folder = session()->get('select_folder');
-        $memos_list = Memo::where('user_id', $user_id)->where('folder_id', $select_folder['id'])->get();
+        // $memos_list = Memo::where('user_id', $user_id)->where('folder_id', $select_folder['id'])->get();
         return view('memos_list', [
             'folders' => $folders,
             'select_folder' => $select_folder,
             'user_id' => $user_id,
-            'memos_list' => $memos_list,
+            // 'memos_list' => $memos_list,
         ]);
     }
 

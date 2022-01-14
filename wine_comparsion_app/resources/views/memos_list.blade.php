@@ -71,9 +71,9 @@
         <div class="col-md-2 p-0" style="background-color:white;">
 
             <a href="{{ route('createView') }}">メモの作成</a>
-            @foreach ($memos_list as $memo)
+            {{-- @foreach ($memos_list as $memo)
                 <a href="{{ route('memo.select', ['id' => $memo->id]) }}"><p>{{ $memo->name}}</p></a>
-            @endforeach
+            @endforeach --}}
            {{--  @if ($memos->count() === 0)
                 <p>メモがありません</p>
             @endif
@@ -102,10 +102,10 @@
         {{-- 右のカラム --}}
         <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
             {{-- {{dd($memo)}} --}}
-            @if ($memos_list->count() !== 0)
+            {{-- @if ($memos_list->count() !== 0)
                 <p>{{ $memo->name }}</p>
                 <a href="{{ route('memo.editView',['id' => $memo->id]) }}">編集</a>
-            @endif
+            @endif --}}
 
             {{-- @if ($memo == null)
                 <p>メモがありません</p>
