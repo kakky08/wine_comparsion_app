@@ -32,20 +32,25 @@ class Memo extends Model
         'acidity_taste'
     ];
 
+    /**
+     * メモ一覧データの取得
+     * @param $user_id
+     * @return $memo
+     */
     public function myMemo($user_id)
     {
-        $folder = Folder::query('folder');
+        $folder = Folder::where('user_id', $user_id)->get();
 
         if (empty($folder)) {
             return Memo::where('user_id', $user_id)->where('status', 1)->get();
         } else {
             $memos = Memo::leftJoin('folders', 'folders.id', '=', 'memos.folder_id')
-                ->where('folders.name', $folder)
-                ->where('folders.user_id', $user_id)
                 ->where('memos.user_id', $user_id)
                 ->where('status', 1)
                 ->get();
             return $memos;
         }
+        // $memos = Memo::where('user_id', $user_id)->get();
+        // return $memos;
     }
 }
