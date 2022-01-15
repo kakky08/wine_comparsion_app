@@ -36,7 +36,7 @@ class MemoController extends Controller
             'grapes' => Grape::get(),
             // 'arome_categories' => AromaCategory::get(),
             'select_folder' => $select_folder,
-            'user_id' => $user_id,
+            // 'user_id' => $user_id,
             'memos_list' => $memos_list,
             'memo_select' => $memo_select,
             'memo' => $memo,

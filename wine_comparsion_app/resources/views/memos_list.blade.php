@@ -23,54 +23,48 @@
 <div class="h-100 container-fluid">
     <div class="row h-100">
         {{-- サイドバー ここから--}}
-        <div class="col-md-3 pt-5" style="background-color:rgb(209, 209, 209);">
-            <form method="POST" action="{{ route('create.folder')}}">
+        <div class="col-md-2 pt-5" style="background-color:rgb(209, 209, 209);">
+            {{-- create_folder start --}}
+            <form method="POST" action="{{ route('create.folder')}}" class="row g-3">
                 @csrf
                 <input type="hidden" name="user_id" value="{{ $user_id }}">
-                <input type="text" name="folder" placeholder="ファイル名を入力">
-                <button type="submit" class="btn btn-success">作成</button>
+                <div class="col-9">
+                    <input type="text" name="folder" class="form-control"  placeholder="フォルダ名を入力">
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary mb-3">作成</button>
+                </div>
             </form>
-            {{-- <a href="{{ route('folder.delete', ['id' => $select_folder->id]) }}" class="btn btn-danger">削除</a> --}}
-            {{-- <form method="POST" action="{{ route('delete.folder', ['id'] => $folder->id ) }}">
-                @csrf
-                <button type="submit" class="btn btn-danger">削除</button>
-            </form> --}}
-            {{-- <a href="{{ route('memo.create') }}" class="btn btn-success">メモ作成</a> --}}
-            <!-----省略----->
-        {{-- <form class="w-100 h-100" method="post">
-            @csrf
-            <input type="hidden" name="folder_id" value="{{ $select_folder->id }}" />
-            <div id="memo-menu">
-                <!-----ここから変更する----->
-                <button type="submit" class="btn btn-danger" formaction="{{ route('folder.delete') }}">ファイルの削除</button>
-                <!-----ここまで変更する----->
-                <button type="submit" class="btn btn-success" formaction="{{ route('folder.add') }}">ファイルの追加</button>
-            </div>
-        </form> --}}
-             {{-- <button type="submit" class="btn btn-danger" value="{{ $select_folder->id }}" formaction="{{ route('folder.delete')}}">ファイルの削除</button> --}}
-            {{-- <a href="{{ route('folder.delete', ['id' => $select_folder->id] )}}" class="btn btn-danger">フォルダの削除</a> --}}
+            {{-- create_folder end --}}
+
             @if ($folders->count() === 0)
                 <div class="pl-3 pt-3 h5 text-info text-center">
                     フォルダがありません。
                 </div>
             @endif
 
+            {{-- folder_list start --}}
             @foreach ($folders as $folder)
-            {{-- {{dd($folder)}} --}}
-                <a href="{{ route('folder.select', ['id' => $folder->id])}}"
-                    class="list-group-item list-group-item-action @if($select_folder){{$select_folder->id == $folder->id ? 'active' : ''}}@endif">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{ $folder->name }} </h5>
-                    <small>{{ date('Y/m/d H:i', strtotime($folder->updated_at)) }}</small>
+                <div class="list-group list-group-flush">
+                    <a href="{{ route('folder.select', ['id' => $folder->id]) }}"
+                        class="list-group-item list-group-item-action p-3 {{$select_folder->id == $folder->id ? 'active' : ''}}"
+                        >
+                        <h5 class="mb-1"><span class="me-3"><i class="fas fa-folder"></i></span>{{ $folder->name }}</h5>
+                    </a>
                 </div>
-                </a>
             @endforeach
+            {{-- folder_list end --}}
+
         </div>
         {{-- サイドバー ここまで--}}
         {{-- memoリスト一覧 ここから --}}
         <div class="col-md-2 p-0" style="background-color:white;">
 
             <a href="{{ route('createView') }}">メモの作成</a>
+            @foreach ($memos as $memo)
+                <p>{{ $memo->name }}</p>
+            @endforeach
+            <p>{{ $text }}</p>
             {{-- @foreach ($memos_list as $memo)
                 <a href="{{ route('memo.select', ['id' => $memo->id]) }}"><p>{{ $memo->name}}</p></a>
             @endforeach --}}
@@ -100,7 +94,12 @@
         </div>
         {{-- memoリスト一覧 ここから --}}
         {{-- 右のカラム --}}
-        <div class="col-md-7 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
+        <div class="col-md-8 px-4 pt-5" style="background-color:rgb(219, 219, 219);">
+            {{-- {{ dd($memos) }} --}}
+
+            {{-- @foreach ($memos as $memo)
+                <p>{{ $memo->name }}</p>
+            @endforeach --}}
             {{-- {{dd($memo)}} --}}
             {{-- @if ($memos_list->count() !== 0)
                 <p>{{ $memo->name }}</p>
