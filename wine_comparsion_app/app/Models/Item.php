@@ -18,4 +18,9 @@ class Item extends Model
         'grape_taste',
         'taste_category',
     ];
+
+    public function favorites()
+    {
+        return $this->hasMany('App\Favorite');
+    }
 }

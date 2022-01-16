@@ -14,4 +14,9 @@ class Folder extends Model
         'name',
         'status',
     ];
+
+    public function memos()
+    {
+        return $this->hasMany('App\Memo');
+    }
 }
