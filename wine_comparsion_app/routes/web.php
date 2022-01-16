@@ -41,11 +41,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('wine/drink_comparison', [SearchController::class, 'drink_comparison'])->name('drink.comparison');
     Route::get('/wine/favorite/add', [FavoriteController::class, 'add'])->name('favorite.add');
     Route::get('/wine/favorite/delete', [FavoriteController::class, 'delete'])->name('favorite.delete');
-    Route::get('/mymemo', [FolderController::class, 'index'])->name('mymemo.index');
+    Route::get('/mymemo', [MemoController::class, 'index'])->name('mymemo.index');
+    Route::get('/mymemo/{folder}', [MemoController::class, 'folder_select'])->name('folder.select');
     Route::post('/mymemo/create_folder', [FolderController::class, 'create_folder'])->name('create.folder');
     Route::post('mymemo/delete_folder', [FolderController::class, 'folder_delete'])->name('delete.folder');
     Route::get('/mymemo/folder/add', [FolderController::class, 'add'])->name('folder.add');
-    Route::get('mymemo/folder/select', [FolderController::class, 'folder_select'])->name('folder.select');
+    // Route::get('mymemo/folder/select', [FolderController::class, 'folder_select'])->name('folder.select');
     Route::get('/mymemo/folder/delete/{id}', [FolderController::class, 'folder_delete'])->name('folder.delete');
     Route::get('/mymemo/memo/create', [MemoController::class, 'createView'])->name('createView');
     Route::post('/mymemo/memo/add', [MemoController::class, 'create'])->name('memo.add');

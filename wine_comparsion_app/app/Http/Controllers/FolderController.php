@@ -41,10 +41,7 @@ class FolderController extends Controller
             'status' => 1,
         ]);
 
-        // return redirect()->route('mymemo.index');
-        return view(
-            'memos_list',
-        );
+        return redirect()->route('mymemo.index');
     }
 
     /* public function folder_delete(Request $request)

@@ -15,6 +15,33 @@ use SebastianBergmann\LinesOfCode\Counter;
 class MemoController extends Controller
 {
 
+    /**
+     * メモ一覧データの取得
+     * @return \Illuminate\View\View
+     */
+    public function index()
+    {
+        $user_id = Auth::id();
+        $memos = Memo::where('user_id', $user_id)->get();
+        $select_folder = session()->get('select_folder');
+        return view('memos_list', compact('select_folder', 'memos'));
+    }
+
+    /**
+     * メモ一覧データの取得
+     * @param $folder
+     * @return $m
+     */
+    public function folder_select($folder)
+    {
+        $user_id = Auth::id();
+        $memos = Memo::join('folders', 'folders.id', '=', 'memos.folder_id')
+            ->where('memos.user_id', $user_id)
+            ->where('folders.name', $folder)
+            ->get();
+        dd($memos);
+        return view('memos_list', compact('memos'));
+    }
 
     /**
      * メモの新規作成画面の表示
@@ -42,6 +69,7 @@ class MemoController extends Controller
             'memo' => $memo,
         ]);
     }
+
     /**
      * メモの作成
      */

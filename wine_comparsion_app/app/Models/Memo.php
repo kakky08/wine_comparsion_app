@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use GuzzleHttp\Psr7\Request;
+// use GuzzleHttp\Psr7\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Client\Request as ClientRequest;
-use Illuminate\Support\Facades\Request as FacadesRequest;
+use Illuminate\Http\Request;
+use Illuminate\Http\Request as HttpRequest;
 
 class Memo extends Model
 {
@@ -32,25 +32,27 @@ class Memo extends Model
         'acidity_taste'
     ];
 
-    /**
+    /* /**
      * メモ一覧データの取得
      * @param $user_id
      * @return $memo
      */
-    public function myMemo($user_id)
+    /* public function myMemo(Request $request, $user_id)
     {
-        $folder = Folder::where('user_id', $user_id)->get();
+        $f = Request::input('aa');
+        $folder = Folder::where('user_id', $user_id)->where('name',  $request->folder)->get();
 
         if (empty($folder)) {
             return Memo::where('user_id', $user_id)->where('status', 1)->get();
         } else {
             $memos = Memo::leftJoin('folders', 'folders.id', '=', 'memos.folder_id')
                 ->where('memos.user_id', $user_id)
+                ->where('folder.name', $request->name)
                 ->where('status', 1)
                 ->get();
             return $memos;
-        }
-        // $memos = Memo::where('user_id', $user_id)->get();
-        // return $memos;
-    }
+        } */
+    // $memos = Memo::where('user_id', $user_id)->get();
+    // return $memos;
+
 }
