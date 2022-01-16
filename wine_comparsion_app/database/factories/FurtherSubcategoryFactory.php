@@ -15,6 +15,7 @@ class FurtherSubcategoryFactory extends Factory
     {
         return [
             'aroma_type' => $this->faker->realText(10),
+            'aroma_subcategory_id' => $this->faker->randomDigit(),
         ];
     }
 }

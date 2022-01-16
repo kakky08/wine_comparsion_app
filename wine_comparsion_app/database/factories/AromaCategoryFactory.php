@@ -14,7 +14,6 @@ class AromaCategoryFactory extends Factory
     public function definition()
     {
         return [
-            'aroma_subcategory_id' => $this->faker->randomDigit(),
             'aroma_type' => $this->faker->realText(10),
         ];
     }
