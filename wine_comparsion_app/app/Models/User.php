@@ -46,7 +46,7 @@ class User extends Authenticatable
 
     public function memos()
     {
-        return $this->hasMany('App\Memo');
+        return $this->hasMany('App\Models\Memo');
     }
     public function folders()
     {
