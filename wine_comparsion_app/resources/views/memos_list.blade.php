@@ -46,7 +46,7 @@
             {{-- folder_list start --}}
             @foreach ($folders as $folder)
                 <div class="list-group list-group-flush">
-                    <a href="{{ route('folder.select', ['folder' => $folder->name ]) }}"
+                    <a href="{{ route('folder.select', ['folder' => $folder->id ]) }}"
                         class="list-group-item list-group-item-action p-3 {{-- {{$select_folder->id == $folder->id ? 'active' : ''}} --}}"
                         >
                         <h5 class="mb-1"><span class="me-3"><i class="fas fa-folder"></i></span>{{ $folder->name }}</h5>
@@ -64,7 +64,6 @@
             @foreach ($memos as $memo)
                 <p>{{ $memo->name }}</p>
             @endforeach
-            <p>{{ $text }}</p>
             {{-- @foreach ($memos_list as $memo)
                 <a href="{{ route('memo.select', ['id' => $memo->id]) }}"><p>{{ $memo->name}}</p></a>
             @endforeach --}}
